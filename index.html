@@ -211,7 +211,7 @@
                 <span data-en="03. Real-time Inference & Latency Optimization" data-ko="03. 실시간 인퍼런스 및 지연시간 최적화" data-ja="03. リアルタイム推論と遅延時間の最適化">03. 실시간 인퍼런스 및 지연시간 최적화</span>
               </h3>
               <p class="text-sm text-slate-400 leading-relaxed">
-                <span data-en="SNAP achieves a pragmatic balance between accuracy and speed by utilizing a frozen BERT backbone with optional INT8 quantization for real-time streaming pipelines. Furthermore, when integrated into BERT-embedded TTS models (such as BERT-VITS2), SNAP caches and shares pre-computed BERT hidden states across neural heads. This eliminates redundant representation passes, reducing additional text normalization overhead to +0.03ms." data-ko="SNAP은 고정된(Frozen) 사전학습 BERT 백본(배포 시 INT8 양자화 옵션 지원)을 채택하여 실시간 인퍼런스가 가능한 초저지연 속도를 유지하면서도 높은 정규화 정확도를 달성하는 기술적 절충점을 제공합니다. 특히 문맥 반영을 위해 BERT를 내장한 현대 TTS 모델(BERT-VITS2 등)과 연동 시, 이미 인퍼런스된 BERT 결과를 캐싱(Cache)하여 여러 Neural Head들이 공유합니다. 이를 통해 추가 지연시간을 사실상 제로(+0.03ms 수준)에 가깝게 유지할 수 있습니다." data-ja="SNAPは固定済み(Frozen)事前学習BERTバックボーンを採用し、リアルタイム処理可能な低遅延を維持しながら高精度を達成する実用的な折衷案を提示します。特にBERT内蔵TTSモデルと連動する場合、一度計算されたBERT結果をキャッシュ共有し、追加遅延時間を実質ゼロ（+0.03ms水準）に維持できます。">SNAP은 고정된(Frozen) 사전학습 BERT 백본(배포 시 INT8 양자화 옵션 지원)을 채택하여 실시간 인퍼런스가 가능한 초저지연 속도를 유지하면서도 높은 정규화 정확도를 달성하는 기술적 절충점을 제공합니다. 특히 문맥 반영을 위해 BERT를 내장한 현대 TTS 모델(BERT-VITS2 등)과 연동 시, 이미 인퍼런스된 BERT 결과를 캐싱(Cache)하여 여러 Neural Head들이 공유합니다. 이를 통해 추가 지연시간을 사실상 제로(+0.03ms 수준)에 가깝게 유지할 수 있습니다.</span>
+                <span data-en="SNAP leverages an INT8-quantized lightweight BERT backbone to deliver low-latency real-time inference while preserving contextual representation. Furthermore, when integrated into BERT-embedded TTS models (such as BERT-VITS2), SNAP caches and shares pre-computed BERT hidden states across neural heads, eliminating redundant passes." data-ko="SNAP은 INT8 양자화 기반의 경량 BERT 백본을 활용하여 문맥 표현력을 유지하면서 저지연 실시간 인퍼런스를 제공합니다. 특히 BERT 내장 TTS 모델(BERT-VITS2 등) 연동 시 pre-computed BERT Hidden State를 캐싱·공유하여 추가 연산 오버헤드를 줄입니다." data-ja="SNAPはINT8量子化基盤の軽量BERTバックボーンを活用し、文脈表現力を維持しながら低遅延リアルタイム推論を提供します。特にBERT内蔵TTSモデル連動時、BERT Hidden Stateをキャッシュ共有し追加演算を削減します。">SNAP은 INT8 양자화 기반의 경량 BERT 백본을 활용하여 문맥 표현력을 유지하면서 저지연 실시간 인퍼런스를 제공합니다. 특히 BERT 내장 TTS 모델(BERT-VITS2 등) 연동 시 pre-computed BERT Hidden State를 캐싱·공유하여 추가 연산 오버헤드를 줄입니다.</span>
               </p>
 
               <!-- Latency Benchmark Comparison Table -->
@@ -604,6 +604,9 @@
           <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-onyx/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
             <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200"><span data-en="Applications & Demos" data-ko="응용 예시 및 데모" data-ja="応用例とデモ">응용 예시 및 데모</span></h2>
           </div>
+          <p class="mb-6 text-xs font-mono text-slate-400">
+            <span data-en="* Note: Pre-generated audio/video samples using SNAP-integrated TTS pipelines. (Use top demo for live inference)" data-ko="※ 본 샘플은 SNAP 엔진이 적용된 TTS·더빙 파이프라인의 실제 생성 결과물입니다. (실시간 대화형 테스트는 상단 데모 이용)" data-ja="※ 本サンプルはSNAPエンジンが適用されたTTS・吹き替えの実際の結果物です。（リアルタイム推論は上部デモを利用）">※ 본 샘플은 SNAP 엔진이 적용된 TTS·더빙 파이프라인의 실제 생성 결과물입니다. (실시간 대화형 테스트는 상단 데모 이용)</span>
+          </p>
 
           <div class="space-y-8">
             
