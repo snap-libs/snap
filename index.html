@@ -14,14 +14,14 @@
   <meta property="og:url" content="https://snap-libs.github.io/snap/">
   <meta property="og:title" content="SNAP | Real-Time Multilingual TTS Frontend & ITN Engine">
   <meta property="og:description" content="Real-time, context-aware text normalization & ITN framework via frozen BERT probing. High-speed C++ native engine.">
-  <meta property="og:image" content="https://snap-libs.github.io/snap/demo/snap_core_engine.jpg">
+  <meta property="og:image" content="https://snap-libs.github.io/snap/img/snap_demo_huggingface.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://snap-libs.github.io/snap/">
   <meta name="twitter:title" content="SNAP | Real-Time Multilingual TTS Frontend & ITN Engine">
   <meta name="twitter:description" content="Real-time, context-aware text normalization & ITN framework via frozen BERT probing. High-speed C++ native engine.">
-  <meta name="twitter:image" content="https://snap-libs.github.io/snap/demo/snap_core_engine.jpg">
+  <meta name="twitter:image" content="https://snap-libs.github.io/snap/img/snap_demo_huggingface.png">
 
   <link rel="canonical" href="https://snap-libs.github.io/snap/">
 
@@ -69,6 +69,7 @@
               <li>
                 <a class="group flex items-center py-2" href="#applications"><span class="nav-indicator"></span><span class="nav-text"><span data-en="Applications & Demos" data-ko="응용 예시 및 데모" data-ja="応用例とデモ">응용 예시 및 데모</span></span></a>
                 <ul class="pl-6 space-y-0.5 text-xs">
+                  <li><a class="group flex items-center py-1.5" href="#app-live-demo"><span class="nav-indicator"></span><span class="nav-text"><span data-en="Text Normalization Live Demo" data-ko="실시간 텍스트 정규화 데모" data-ja="リアルタイムテキスト正規化デモ">실시간 텍스트 정규화 데모</span></span></a></li>
                   <li><a class="group flex items-center py-1.5" href="#app-tts"><span class="nav-indicator"></span><span class="nav-text"><span data-en="TTS (MeloTTS)" data-ko="TTS 통합 (MeloTTS)" data-ja="TTS統合 (MeloTTS)">TTS 통합 (MeloTTS)</span></span></a></li>
                   <li><a class="group flex items-center py-1.5" href="#app-dubbing"><span class="nav-indicator"></span><span class="nav-text"><span data-en="AI Video Dubbing" data-ko="AI 비디오 더빙" data-ja="AI吹き替え">AI 비디오 더빙</span></span></a></li>
                   <li><a class="group flex items-center py-1.5" href="#app-itn"><span class="nav-indicator"></span><span class="nav-text"><span data-en="STT ITN Engine" data-ko="STT 역정규화 (SNAP-ITN)" data-ja="STT逆正規化">STT 역정규화 (SNAP-ITN)</span></span></a></li>
@@ -606,6 +607,37 @@
 
           <div class="space-y-8">
             
+            <!-- App 0: Text Normalization Live Demo (Hugging Face) -->
+            <div id="app-live-demo" class="p-6 rounded-lg border border-slate-800 bg-slate-900/20 space-y-5 scroll-mt-24">
+              <div>
+                <h3 class="text-base font-semibold text-slate-200">
+                  <span data-en="Text Normalization Live Demo" data-ko="실시간 텍스트 정규화 데모" data-ja="リアルタイムテキスト正規化デモ">실시간 텍스트 정규화 데모</span>
+                </h3>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                <span data-en="An interactive demo on Hugging Face Spaces for testing SNAP Native C++ engine's Text Normalization (TN) and G2P inference. Supports phonetic conversion and SSML output across Korean, English, and Japanese." data-ko="Hugging Face Spaces 환경에서 SNAP Native C++ 엔진 기반의 텍스트 정규화(TN) 및 G2P 추론을 직접 테스트할 수 있는 대화형 데모입니다. 한국어, 영어, 일본어의 발음 변환 및 SSML 출력을 지원합니다." data-ja="Hugging Face Spaces環境でSNAP Native C++エンジン基盤のテキスト正規化(TN)およびG2P推論をテストできるインタラクティブデモです。韓国語、英語、日本語の発音変換およびSSML出力に対応しています。">Hugging Face Spaces 환경에서 SNAP Native C++ 엔진 기반의 텍스트 정규화(TN) 및 G2P 추론을 직접 테스트할 수 있는 대화형 데모입니다. 한국어, 영어, 일본어의 발음 변환 및 SSML 출력을 지원합니다.</span>
+              </p>
+
+              <!-- Demo Preview Image with Modal Zoom -->
+              <div class="relative group overflow-hidden rounded-lg border border-slate-800 bg-slate-950 p-1.5 transition-colors duration-200 hover:border-slate-700 cursor-pointer" onclick="openImageModal('img/snap_demo_huggingface.png')">
+                <img src="img/snap_demo_huggingface.png" alt="SNAP Text Normalization Live Demo Interface" class="w-full h-auto rounded opacity-90 transition-opacity duration-200 group-hover:opacity-100 max-w-xl mx-auto">
+                <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+                  <span class="bg-slate-900/90 text-slate-200 text-xs font-mono px-3.5 py-1.5 rounded border border-slate-700 shadow-md flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                    <span data-en="Click to Enlarge Image" data-ko="클릭하여 이미지 크게 보기" data-ja="クリックで拡大表示">클릭하여 이미지 크게 보기</span>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Button CTA -->
+              <div class="pt-1 flex justify-end">
+                <a href="https://huggingface.co/spaces/softguy777/snap-demo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono border border-slate-700 transition-colors">
+                  <span data-en="SNAP Text Normalization Live Demo" data-ko="SNAP 텍스트 정규화 실시간 데모" data-ja="SNAP テキスト正規化 リアルタイムデモ">SNAP 텍스트 정규화 실시간 데모</span>
+                  <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+              </div>
+            </div>
+
             <!-- App 1: SNAP Frontend & BERT-VITS2 TTS -->
             <div id="app-tts" class="p-6 rounded-lg border border-slate-800 bg-slate-900/20 space-y-5 scroll-mt-24">
               <div class="flex justify-between items-center flex-wrap gap-2">
@@ -1114,5 +1146,15 @@
       });
     }
   </script>
+  <!-- Image Lightbox Modal -->
+  <div id="image-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 p-4 backdrop-blur-sm cursor-pointer" onclick="closeImageModal()">
+    <div class="relative max-w-6xl w-full max-h-[92vh] flex flex-col items-center justify-center" onclick="event.stopPropagation()">
+      <button onclick="closeImageModal()" class="absolute -top-10 right-0 text-slate-300 hover:text-white font-mono text-xs flex items-center gap-1.5 bg-slate-900/90 px-3 py-1.5 rounded border border-slate-700 shadow-lg">
+        <span>✕ Close (ESC)</span>
+      </button>
+      <img id="modal-image" src="" alt="Enlarged Demo View" class="max-w-full max-h-[85vh] rounded-lg border border-slate-700 shadow-2xl object-contain">
+    </div>
+  </div>
+
 </body>
 </html>
