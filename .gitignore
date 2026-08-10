@@ -1,0 +1,12 @@
+# Ignore internal markdown docs, python scripts, and scratch batch files
+*.py
+*.bat
+*.md
+!README.md
+
+# Ignore temporary folders and IDE files
+scratch/
+.idea/
+.vscode/
+.DS_Store
+*.tmp
