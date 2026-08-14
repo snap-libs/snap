@@ -604,10 +604,6 @@
           <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-onyx/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
             <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200"><span data-en="Applications & Demos" data-ko="응용 예시 및 데모" data-ja="応用例とデモ">응용 예시 및 데모</span></h2>
           </div>
-          <p class="mb-6 text-xs font-mono text-slate-400">
-            <span data-en="* Note: Pre-generated audio/video samples using SNAP-integrated TTS pipelines. (Use top demo for live inference)" data-ko="※ 본 샘플은 SNAP 엔진이 적용된 TTS·더빙 파이프라인의 실제 생성 결과물입니다. (실시간 대화형 테스트는 상단 데모 이용)" data-ja="※ 本サンプルはSNAPエンジンが適用されたTTS・吹き替えの実際の結果物です。（リアルタイム推論は上部デモを利用）">※ 본 샘플은 SNAP 엔진이 적용된 TTS·더빙 파이프라인의 실제 생성 결과물입니다. (실시간 대화형 테스트는 상단 데모 이용)</span>
-          </p>
-
           <div class="space-y-8">
             
             <!-- App 0: Text Normalization Live Demo (Hugging Face) -->
@@ -1108,6 +1104,43 @@
                   <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                 </a>
               </div>
+
+<!-- SNAP + MeloTTS Live Voice Demo Card (#app-voice-demo) -->
+            <div id="app-voice-demo" class="p-6 rounded-xl border border-slate-800 bg-slate-900/40 space-y-4 scroll-mt-20">
+              <div class="flex justify-between items-start flex-wrap gap-2">
+                <div>
+                  <h3 class="text-base font-bold text-slate-200">
+                    <span data-en="SNAP + MeloTTS Real-time Speech Synthesis Demo" data-ko="SNAP + MeloTTS 음성 합성 실시간 데모" data-ja="SNAP + MeloTTS 音声合成 リアルタイムデモ">SNAP + MeloTTS 음성 합성 실시간 데모</span>
+                  </h3>
+                  <p class="text-xs text-slate-400 mt-1">
+                    <span data-en="Interactive Hugging Face Space integrating SNAP Frontend with MeloTTS for real-time context-aware speech synthesis." data-ko="SNAP Frontend와 MeloTTS/BERT-VITS2를 결합하여 문맥 의존 고품질 음성을 실시간 합성하는 인터랙티브 허깅페이스 데모입니다." data-ja="SNAP FrontendとMeloTTSを結合し、文脈依存の高音質音声をリアルタイム合成するインタラクティブなHugging Faceデモです。">SNAP Frontend와 MeloTTS/BERT-VITS2를 결합하여 문맥 의존 고품질 음성을 실시간 합성하는 인터랙티브 허깅페이스 데모입니다.</span>
+                  </p>
+                </div>
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-mono bg-slate-800/80 border border-slate-700/60 text-slate-300">Hugging Face Space</span>
+              </div>
+
+              <!-- Preview Image Container (Modal Zoom on Click) -->
+              <div class="relative group rounded-lg overflow-hidden border border-slate-800 bg-slate-950/80 cursor-pointer shadow-inner" onclick="openImageModal('img/snap_voice_demo_hf.png')">
+                <img src="img/snap_voice_demo_hf.png" alt="SNAP Voice Live Demo Preview" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.015] opacity-90 group-hover:opacity-100" />
+                <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                  <span class="px-3.5 py-1.5 rounded-full bg-slate-900/90 text-slate-200 border border-slate-700/80 text-xs font-medium shadow-lg flex items-center gap-1.5">
+                    <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                    <span data-en="Click to Expand Image" data-ko="클릭하여 이미지 크게 보기" data-ja="クリックして画像を拡大">클릭하여 이미지 크게 보기</span>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="pt-1 flex items-center gap-3 flex-wrap">
+                <a href="https://huggingface.co/spaces/softguy777/snap_voice_demo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 border border-slate-700/80 transition-colors shadow-sm">
+                  <span data-en="SNAP + MeloTTS Real-time Demo ↗" data-ko="SNAP + MeloTTS 실시간 음성 데모 ↗" data-ja="SNAP + MeloTTS リアルタイム音声デモ ↗">SNAP + MeloTTS 실시간 음성 데모 ↗</span>
+                </a>
+                <a href="https://github.com/snap-libs/snap_voice" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/80 hover:bg-slate-700/80 text-xs font-semibold text-slate-300 border border-slate-700/60 transition-colors shadow-sm">
+                  <svg class="w-3.5 h-3.5 text-slate-400" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                  <span data-en="SnapVoice GitHub Repo ↗" data-ko="SnapVoice 저장소 ↗" data-ja="SnapVoice リポジトリ ↗">SnapVoice 저장소 ↗</span>
+                </a>
+              </div>
+            </div>
             </div>
 
             <!-- git snap -->
