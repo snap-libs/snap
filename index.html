@@ -71,7 +71,7 @@
                 <a class="group flex items-center py-2" href="#applications"><span class="nav-indicator"></span><span class="nav-text"><span data-en="Applications & Demos" data-ko="응용 예시 및 데모" data-ja="応用例とデモ">응용 예시 및 데모</span></span></a>
                 <ul class="pl-6 space-y-0.5 text-xs">
                   <li><a class="group flex items-center py-1.5" href="#app-live-demo"><span class="nav-indicator"></span><span class="nav-text"><span data-en="Text Normalization Live Demo" data-ko="실시간 텍스트 정규화 데모" data-ja="リアルタイムテキスト正規化デモ">실시간 텍스트 정규화 데모</span></span></a></li>
-                  <li><a class="group flex items-center py-1.5" href="#app-voice-demo"><span class="nav-indicator"></span><span class="nav-text"><span data-en="SNAP + MeloTTS Voice Demo" data-ko="SNAP + MeloTTS 실시간 음성 데모" data-ja="SNAP + MeloTTS リアルタイム音声デモ">SNAP + MeloTTS 실시간 음성 데모</span></span></a></li>
+                  <li><a class="group flex items-center py-1.5" href="#app-voice-demo"><span class="nav-indicator"></span><span class="nav-text"><span data-en="Open-Source Voice Demos" data-ko="오픈소스 음성 합성 데모" data-ja="オープンソース音声合成デモ">오픈소스 음성 합성 데모</span></span></a></li>
                   <li><a class="group flex items-center py-1.5" href="#app-tts"><span class="nav-indicator"></span><span class="nav-text"><span data-en="TTS (MeloTTS)" data-ko="TTS 통합 (MeloTTS)" data-ja="TTS統合 (MeloTTS)">TTS 통합 (MeloTTS)</span></span></a></li>
                   <li><a class="group flex items-center py-1.5" href="#app-dubbing"><span class="nav-indicator"></span><span class="nav-text"><span data-en="AI Video Dubbing" data-ko="AI 비디오 더빙" data-ja="AI吹き替え">AI 비디오 더빙</span></span></a></li>
                   <li><a class="group flex items-center py-1.5" href="#app-itn"><span class="nav-indicator"></span><span class="nav-text"><span data-en="STT ITN Engine" data-ko="STT 역정규화 (SNAP-ITN)" data-ja="STT逆正規化">STT 역정규화 (SNAP-ITN)</span></span></a></li>
@@ -97,13 +97,13 @@
             <!-- Logic 1 -->
             <div class="space-y-3">
               <h3 class="text-base font-semibold text-slate-200 uppercase tracking-wider font-mono">
-                <span data-en="01. Text Normalization" data-ko="01. 텍스트 정규화 (Text Normalization)" data-ja="01. テキスト正規化 (Text Normalization)">01. 텍스트 정규화 (Text Normalization)</span>
+                <span data-en="01. Text Normalization & Pipeline Integrity" data-ko="01. 텍스트 전처리와 TTS 파이프라인 무결성" data-ja="01. テキスト前処理とTTSパイプラインの整合性">01. 텍스트 전처리와 TTS 파이프라인 무결성</span>
               </h3>
               <p>
-                <span data-en="When converting text to speech, words must be mapped to their actual pronounced phonetic representations (G2P). While standard shifts can be resolved via deterministic rules, certain words exhibit irregular phonetic shifts depending on context and semantics. Beyond segment-level pronunciation, prosodic nuances such as pitch accent, vowel length, and phonological assimilation introduce complex contextual ambiguities depending on the language." data-ko="텍스트를 음성(Speech)으로 합성할 때, 문장의 각 단어는 실제 소리 나는 발음 기호 및 표기로 변환(G2P)되는 과정이 필수적입니다. 대부분의 변환은 일반적인 언어적 규칙(Rule)에 의해 처리 가능하지만, 일부 단어는 동일한 표기임에도 문맥(Context)과 의미(Semantics)에 따라 발음이 불규칙하게 달라집니다. 나아가 언어에 따라 단순 발음뿐만 아니라 억양(Pitch Accent), 장단음, 연음 및 경음화 등 다양한 형태의 문맥 의존적 불규칙성이 존재합니다." data-ja="テキストを音声に変換する際、各単語は実際に発音される発音記号や読み表記へと変換（G2P）される必要があります。大半の変換は規則的なルールによって処理可能ですが、一部の単語は同一表記であっても文脈や意味に応じて不規則に変化します。発音のみならず言語に応じてアクセント、長短音、連音など多様な形態の文脈依存的曖昧性が存在します。">텍스트를 음성(Speech)으로 합성할 때, 문장의 각 단어는 실제 소리 나는 발음 기호 및 표기로 변환(G2P)되는 과정이 필수적입니다. 대부분의 변환은 일반적인 언어적 규칙(Rule)에 의해 처리 가능하지만, 일부 단어는 동일한 표기임에도 문맥(Context)과 의미(Semantics)에 따라 발음이 불규칙하게 달라집니다. 나아가 언어에 따라 단순 발음뿐만 아니라 억양(Pitch Accent), 장단음, 연음 및 경음화 등 다양한 형태의 문맥 의존적 불규칙성이 존재합니다.</span>
+                <span data-en="In Text-to-Speech (TTS) synthesis, front-end (TN/G2P) misreadings cascade directly into downstream acoustic models, affecting speech clarity. While recorded media like audiobooks allow for manual script inspection, real-time conversational AI (LLM-to-Speech) requires fast and accurate automated text normalization prior to acoustic synthesis." data-ko="텍스트를 음성(Speech)으로 합성할 때 프론트엔드(TN/G2P) 단계의 오독은 다운스트림 음향 모델로 그대로 전파되어 최종 음성의 명료도를 훼손합니다. 오디오북이나 방송 더빙 제작 현장에서는 이를 보정하기 위해 대본을 사전 검수하기도 하지만, 즉각적인 반응이 필요한 실시간 대화형 AI(LLM-to-Speech) 환경에서는 음성 변환 전단계의 정확하고 빠른 자동 정규화가 중요합니다." data-ja="テキスト音声合成（TTS）において、前処理（TN/G2P）段階の誤読は後続の音響モデルへ直接伝播し、音声の明瞭性に影響を与えます。録音制作では人手による事前校正も行われますが、即時応答が求められるリアルタイム対話型AI（LLM-to-Speech）環境では、音声合成前段での正確かつ高速な自動正規化が重要になります。">텍스트를 음성(Speech)으로 합성할 때 프론트엔드(TN/G2P) 단계의 오독은 다운스트림 음향 모델로 그대로 전파되어 최종 음성의 명료도를 훼손합니다. 오디오북이나 방송 더빙 제작 현장에서는 이를 보정하기 위해 대본을 사전 검수하기도 하지만, 즉각적인 반응이 필요한 실시간 대화형 AI(LLM-to-Speech) 환경에서는 음성 변환 전단계의 정확하고 빠른 자동 정규화가 중요합니다.</span>
               </p>
               <p>
-                <span data-en="While acoustic modeling in TTS has advanced to near-human naturalness, solving subtle context errors during text normalization remains a persistent bottleneck. Deploying massive LLMs trained on extensive irregular patterns can resolve context ambiguity to some extent, but introduces unacceptable latency and computational overhead, making real-time streaming pipelines infeasible." data-ko="사람에 가까운 음성을 합성하는 TTS 모델 기술은 비약적인 발전을 이루었지만, 전처리 단계인 정규화(Normalization) 과정에서의 문맥 오류는 여전히 해소되기 힘든 숙제였습니다. 대량의 불규칙성을 학습한 대형 언어 모델(LLM)을 사용하면 어느정도 완화는 가능하나, 높은 연산 지연 속도로 인해 실시간 서비스에 적용하는 데에는 명확한 한계가 존재합니다." data-ja="人間を模した音声を合成するTTSモデル技術は飛躍的な発展を遂げましたが、前処理である正規化（Normalization）過程での文脈エラーは依然として解消が困難な課題でした。大量の不規則性を学習した大型言語モデル（LLM）を使用すればある程度緩和は可能ですが、高い演算遅延速度のためリアルタイムサービスに適用するには明確な限界が存在します。">사람에 가까운 음성을 합성하는 TTS 모델 기술은 비약적인 발전을 이루었지만, 전처리 단계인 정규화(Normalization) 과정에서의 문맥 오류는 여전히 해소되기 힘든 숙제였습니다. 대량의 불규칙성을 학습한 대형 언어 모델(LLM)을 사용하면 어느정도 완화는 가능하나, 높은 연산 지연 속도로 인해 실시간 서비스에 적용하는 데에는 명확한 한계가 존재합니다.</span>
+                <span data-en="SNAP is engineered as a lightweight front-end optimized for streaming voice pipelines. By pairing neural context probing with deterministic rule-based phonetic control, it provides consistent and dependable text pre-processing with minimal latency overhead." data-ko="SNAP은 실시간 음성 스트리밍 파이프라인에 최적화된 경량 엔진입니다. '경량 신경망의 문맥 속성 판별'과 '결정론적 룰 엔진의 발음 제어'를 결합하여, 지연을 최소화하면서도 일관되고 신뢰할 수 있는 텍스트 전처리를 지원합니다." data-ja="SNAPはストリーミング音声パイプラインに最適化された軽量フロントエンドです。「神経網の文脈判定」と「決定論的ルールエンジンの制御」を結合し、遅延を抑えながら一貫した信頼性の高いテキスト前処理を提供します。">SNAP은 실시간 음성 스트리밍 파이프라인에 최적화된 경량 엔진입니다. '경량 신경망의 문맥 속성 판별'과 '결정론적 룰 엔진의 발음 제어'를 결합하여, 지연을 최소화하면서도 일관되고 신뢰할 수 있는 텍스트 전처리를 지원합니다.</span>
               </p>
             </div>
 
@@ -113,7 +113,7 @@
                 <span data-en="02. Disambiguation via Frozen BERT Probing" data-ko="02. Frozen BERT Probing을 통한 모호성 해소" data-ja="02. Frozen BERT Probingによる曖昧性解消">02. Frozen BERT Probing을 통한 모호성 해소</span>
               </h3>
               <p>
-                <span data-en="Instead of deploying heavy LLMs, SNAP attaches multiple lightweight neural probes to a quantized BERT backbone to extract contextual and semantic representations. By pairing these probe features with deterministic rules, SNAP achieves real-time, low-latency, and highly accurate text normalization and inverse normalization." data-ko="SNAP은 대형 LLM 대신 경량 BERT에 다양한 목적의 신경망 프로브(Probes)를 결합하여 문장의 문맥과 의미 정보를 정밀하게 추출합니다. 그리고 이를 토대로 규칙(Rule) 모듈과 결합함으로써, 실시간 초저지연과 높은 정밀도의 정규화/역정규화를 수행합니다." data-ja="SNAPは大型LLMの代わりに軽量BERTに多様な神経網プロブ（Probes）를 結合し、文章の文脈・意味情報を精密に抽出します。これを基に規則モジュールを結合することで、リアルタイム低遅延と高精度な正規化・逆正規化を実行します。">SNAP은 대형 LLM 대신 경량 BERT에 다양한 목적의 신경망 프로브(Probes)를 결합하여 문장의 문맥과 의미 정보를 정밀하게 추출합니다. 그리고 이를 토대로 규칙(Rule) 모듈과 결합함으로써, 실시간 초저지연과 높은 정밀도의 정규화/역정규화를 수행합니다.</span>
+                <span data-en="Instead of deploying heavy generative models, SNAP attaches lightweight linear probing heads to a frozen BERT backbone to identify semantic span tags. Deterministic phonology rules then execute text transformations, suppressing hallucination risks and enabling direct lexicon updates." data-ko="SNAP은 대형 생성 모델 대신 고정된 소형 BERT 백본 위의 경량 Probing Head가 어휘·수사의 문맥적 속성만 판별하고, 실제 텍스트 치환과 한국어 표준 발음법 적용은 결정론적 룰 엔진이 수행합니다. 이를 통해 생성형 모델에서 발생하는 단어 왜곡이나 환각 위험을 억제하며 즉각적인 사전 수정이 가능합니다." data-ja="SNAPは大型生成モデルの代わりに固定BERTバックボーン上の軽量Probing Headが文脈属性を判定し、実際の変換は決定論的ルールエンジンが実行します。これにより生成モデル特有の単語の歪みやハルシネーションを抑制し、即時の辞書修正が可能です。">SNAP은 대형 생성 모델 대신 고정된 소형 BERT 백본 위의 경량 Probing Head가 어휘·수사의 문맥적 속성만 판별하고, 실제 텍스트 치환과 한국어 표준 발음법 적용은 결정론적 룰 엔진이 수행합니다. 이를 통해 생성형 모델에서 발생하는 단어 왜곡이나 환각 위험을 억제하며 즉각적인 사전 수정이 가능합니다.</span>
               </p>
             </div>
 
@@ -202,7 +202,7 @@
 
               <!-- Refined Text Paragraph Directly Below Examples -->
               <p class="text-sm text-slate-400 leading-relaxed pt-2">
-                <span data-en="To process such examples using legacy rule-based approaches, one would have to endlessly expand lexicon dictionaries and regex rules. However, this inevitably leads to rule explosion and unsustainable engine complexity. SNAP allows task-specific Neural Heads to pre-classify contextual structures from frozen BERT representations, enabling low-complexity, deterministic rule module execution without rule explosion." data-ko="위와 같은 예제들을 굳이 기존 방식대로 처리하려면, 수많은 어휘 사전과 예외 규칙을 지속적으로 확장해야만 합니다. 그러나 이는 규칙 수 폭증에 따른 엔진 복잡도가 기하급수적으로 증가하는 한계에 직면합니다. SNAP은 다양한 목적의 Neural Head들이 Frozen BERT 임베딩에서 문맥 구조를 1차 정제함으로써, 예외 규칙의 복잡도를 최소화하고 정교한 규칙 모듈 결합을 통해 안정적인 정규화를 수행합니다." data-ja="上記の例をあえて従来方式で処理しようとすると、多数の辞書や例外ルールを拡張し続ける必要があります。しかし、商品はルール数爆発に伴う構造複雑度が増大する限界に直面します。SNAPは多様な目的のNeural Head群がFrozen BERT表現から文脈構造を1次精製することで、ルールの複雑度を最小化し安定した正規化を実行します。">위와 같은 예제들을 굳이 기존 방식대로 처리하려면, 수많은 어휘 사전과 예외 규칙을 지속적으로 확장해야만 합니다. 그러나 이는 규칙 수 폭증에 따른 엔진 복잡도가 기하급수적으로 증가하는 한계에 직면합니다. SNAP은 다양한 목적의 Neural Head들이 Frozen BERT 임베딩에서 문맥 구조를 1차 정제함으로써, 예외 규칙의 복잡도를 최소화하고 정교한 규칙 모듈 결합을 통해 안정적인 정규화를 수행합니다.</span>
+                <span data-en="To process such examples using legacy rule-based approaches, one would have to endlessly expand lexicon dictionaries and regex rules. However, this inevitably leads to rule explosion and unsustainable engine complexity. SNAP allows task-specific Neural Heads to pre-classify contextual structures from frozen BERT representations, enabling low-complexity, deterministic rule module execution without rule explosion." data-ko="위와 같은 예제들을 굳이 기존 방식대로 처리하려면, 수많은 어휘 사전과 예외 규칙을 지속적으로 확장해야만 합니다. 그러나 이는 규칙 수 폭증에 따른 엔진 복잡도가 기하급수적으로 증가하는 한계에 직면합니다. SNAP은 다양한 목적의 Neural Head들이 Frozen BERT 임베딩에서 문맥 구조를 1차 정제함으로써, 예외 규칙의 복잡도를 최소화하고 정교한 규칙 모듈 결합을 통해 안정적인 정규화를 수행합니다." data-ja="上記の例をあえて従来方式で処理しようとすると、多数の辞書や例外ルールを拡張し続ける必要があります。しかし、これはルール数の爆発に伴いエンジンの構造複雑度が増大する限界に直面します。SNAPは多様な目的のNeural Head群がFrozen BERT表現から文脈構造を1次精製することで、ルールの複雑度を最小化し安定した正規化を実行します。">위와 같은 예제들을 굳이 기존 방식대로 처리하려면, 수많은 어휘 사전과 예외 규칙을 지속적으로 확장해야만 합니다. 그러나 이는 규칙 수 폭증에 따른 엔진 복잡도가 기하급수적으로 증가하는 한계에 직면합니다. SNAP은 다양한 목적의 Neural Head들이 Frozen BERT 임베딩에서 문맥 구조를 1차 정제함으로써, 예외 규칙의 복잡도를 최소화하고 정교한 규칙 모듈 결합을 통해 안정적인 정규화를 수행합니다.</span>
               </p>
 
             </div>
@@ -213,7 +213,7 @@
                 <span data-en="03. Real-time Inference & Latency Optimization" data-ko="03. 실시간 인퍼런스 및 지연시간 최적화" data-ja="03. リアルタイム推論と遅延時間の最適化">03. 실시간 인퍼런스 및 지연시간 최적화</span>
               </h3>
               <p class="text-sm text-slate-400 leading-relaxed">
-                <span data-en="SNAP leverages an INT8-quantized lightweight BERT backbone to deliver low-latency real-time inference while preserving contextual representation. Furthermore, when integrated into BERT-embedded TTS models (such as BERT-VITS2), SNAP caches and shares pre-computed BERT hidden states across neural heads, eliminating redundant passes." data-ko="SNAP은 INT8 양자화 기반의 경량 BERT 백본을 활용하여 문맥 표현력을 유지하면서 저지연 실시간 인퍼런스를 제공합니다. 특히 BERT 내장 TTS 모델(BERT-VITS2 등) 연동 시 pre-computed BERT Hidden State를 캐싱·공유하여 추가 연산 오버헤드를 줄입니다." data-ja="SNAPはINT8量子化基盤の軽量BERTバックボーンを活用し、文脈表現力を維持しながら低遅延リアルタイム推論を提供します。特にBERT内蔵TTSモデル連動時、BERT Hidden Stateをキャッシュ共有し追加演算を削減します。">SNAP은 INT8 양자화 기반의 경량 BERT 백본을 활용하여 문맥 표현력을 유지하면서 저지연 실시간 인퍼런스를 제공합니다. 특히 BERT 내장 TTS 모델(BERT-VITS2 등) 연동 시 pre-computed BERT Hidden State를 캐싱·공유하여 추가 연산 오버헤드를 줄입니다.</span>
+                <span data-en="SNAP leverages an INT8-quantized lightweight BERT backbone to deliver low-latency real-time inference while preserving contextual representation. Furthermore, when integrated into BERT-embedded TTS models (such as BERT-VITS2 or MeloTTS), SNAP caches and shares pre-computed BERT hidden states across neural heads, eliminating redundant passes." data-ko="SNAP은 INT8 양자화 기반의 경량 BERT 백본을 활용하여 문맥 표현력을 유지하면서 저지연 실시간 인퍼런스를 제공합니다. 특히 BERT 내장 TTS 모델(BERT-VITS2, MeloTTS 등) 연동 시 pre-computed BERT Hidden State를 캐싱·공유하여 추가 연산 오버헤드를 줄입니다." data-ja="SNAPはINT8量子化基盤の軽量BERTバックボーンを活用し、文脈表現力を維持しながら低遅延リアルタイム推論を提供します。特にBERT内蔵TTSモデル連動時、BERT Hidden Stateをキャッシュ共有し追加演算を削減します。">SNAP은 INT8 양자화 기반의 경량 BERT 백본을 활용하여 문맥 표현력을 유지하면서 저지연 실시간 인퍼런스를 제공합니다. 특히 BERT 내장 TTS 모델(BERT-VITS2, MeloTTS 등) 연동 시 pre-computed BERT Hidden State를 캐싱·공유하여 추가 연산 오버헤드를 줄입니다.</span>
               </p>
 
               <!-- Latency Benchmark Comparison Table -->
@@ -232,24 +232,64 @@
                         <span data-en="Embedded Mode (BERT Representation Reuse)" data-ko="BERT Hidden State 재활용 (임베디드 모드)" data-ja="BERT表現再利用 (Embedded Mode)">BERT Hidden State 재활용 (임베디드 모드)</span>
                       </td>
                       <td class="py-3 px-4 font-bold text-slate-100 underline decoration-slate-500 underline-offset-4" data-en="+0.03 ms / sentence" data-ko="+0.03 ms / 문장" data-ja="+0.03 ms / 文">+0.03 ms / 문장</td>
-                      <td class="py-3 px-4 font-sans text-xs text-slate-400" data-en="Cache sharing with BERT-embedded TTS (BERT-VITS2, etc.) for near-zero additional overhead." data-ko="BERT 내장 TTS(BERT-VITS2 등) 연동시 캐시 공유 (추가 지연시간 Zero 수렴)" data-ja="BERT内蔵TTS連動時キャッシュ共有（追加遅延ほぼゼロ）">BERT 내장 TTS(BERT-VITS2 등) 연동시 캐시 공유 (추가 지연시간 Zero 수렴)</td>
+                      <td class="py-3 px-4 font-sans text-xs text-slate-400" data-en="Cache sharing with BERT-embedded TTS (BERT-VITS2, MeloTTS) for near-zero additional overhead." data-ko="BERT 내장 TTS(BERT-VITS2, MeloTTS 등) 연동 시 캐시 공유 (추가 지연시간 Zero 수렴)" data-ja="BERT内蔵TTS連動時キャッシュ共有（追加遅延ほぼゼロ）">BERT 내장 TTS(BERT-VITS2, MeloTTS 등) 연동 시 캐시 공유 (추가 지연시간 Zero 수렴)</td>
                     </tr>
                     <tr class="hover:bg-slate-800/30 transition-colors">
                       <td class="py-3 px-4 font-semibold text-slate-200">
                         <span data-en="Standalone Engine — CPU (INT8 Quantized)" data-ko="단독 엔진 — CPU (INT8 양자화)" data-ja="スタンドアロンエンジン — CPU (INT8量子化)">단독 엔진 — CPU (INT8 양자화)</span>
                       </td>
-                      <td class="py-3 px-4 font-semibold text-slate-200" data-en="30 – 170 ms / sentence (avg ~44 ms)" data-ko="30 – 170 ms / 문장 (일반 평균 ~44 ms)" data-ja="30 – 170 ms / 文 (平均 ~44 ms)">30 – 170 ms / 문장 (일반 평균 ~44 ms)</td>
-                      <td class="py-3 px-4 font-sans text-xs text-slate-400" data-en="Standalone CPU pipeline (BERT excl. 12ms, 30-170ms length-dependent; typical 50-70 chars ~44ms)." data-ko="단독 CPU 파이프라인 (BERT 제외 12ms, 문장 길이에 따라 30~170ms; 일반 50~70자 평균 ~44ms)" data-ja="単独CPUパイプライン (BERT除外12ms, 文長依存30~170ms; 標準50~70字平均 ~44ms)">단독 CPU 파이프라인 (BERT 제외 12ms, 문장 길이에 따라 30~170ms; 일반 50~70자 평균 ~44ms)</td>
+                      <td class="py-3 px-4 font-semibold text-slate-200" data-en="30 – 44 ms / sentence" data-ko="30 – 44 ms / 문장" data-ja="30 – 44 ms / 文">30 – 44 ms / 문장</td>
+                      <td class="py-3 px-4 font-sans text-xs text-slate-400" data-en="Standalone CPU pipeline (Short ~25ms / Medium ~40ms / Long ~65ms; multithreaded ONNX Runtime)." data-ko="단독 CPU 파이프라인 (단문 ~25ms / 중문 ~40ms / 장문 ~65ms; 멀티스레드 ONNX 최적화)" data-ja="単独CPUパイプライン（短文 ~25ms / 中文 ~40ms / 長文 ~65ms; マルチスレッドONNX最適化）">단독 CPU 파이프라인 (단문 ~25ms / 중문 ~40ms / 장문 ~65ms; 멀티스레드 ONNX 최적화)</td>
                     </tr>
                     <tr class="hover:bg-slate-800/30 transition-colors">
                       <td class="py-3 px-4 font-semibold text-slate-200">
                         <span data-en="Standalone Engine — GPU (CUDA Acceleration)" data-ko="단독 엔진 — GPU (CUDA 가속)" data-ja="スタンドアロンエンジン — GPU (CUDA加速)">단독 엔진 — GPU (CUDA 가속)</span>
                       </td>
                       <td class="py-3 px-4 font-semibold text-slate-200" data-en="11 – 14 ms / sentence" data-ko="11 – 14 ms / 문장" data-ja="11 – 14 ms / 文">11 – 14 ms / 문장</td>
-                      <td class="py-3 px-4 font-sans text-xs text-slate-400" data-en="Large-scale speech service servers and high-throughput GPU serving pipelines." data-ko="대규모 음성 서비스 서버 및 고성능 GPU 서빙 파이프라인 (GPU 벤치마크 실측치)" data-ja="大規模音声サービスサーバーおよび高パフォーマンスGPUサービングパイプライン">대규모 음성 서비스 서버 및 고성능 GPU 서빙 파이프라인 (GPU 벤치마크 실측치)</td>
+                      <td class="py-3 px-4 font-sans text-xs text-slate-400" data-en="Large-scale speech service servers and high-throughput GPU serving pipelines (Short ~8ms / Medium ~12ms / Long ~18ms)." data-ko="대규모 음성 서비스 서버 및 고성능 GPU 서빙 파이프라인 (단문 ~8ms / 중문 ~12ms / 장문 ~18ms)" data-ja="大規模音声サービスサーバーおよび高パフォーマンスGPUサービングパイプライン（短文 ~8ms / 中文 ~12ms / 長文 ~18ms）">대규모 음성 서비스 서버 및 고성능 GPU 서빙 파이프라인 (단문 ~8ms / 중문 ~12ms / 장문 ~18ms)</td>
                     </tr>
                   </tbody>
                 </table>
+              </div>
+
+              <!-- High-Throughput Batch Processing Benchmark Table -->
+              <div class="mt-4 pt-2">
+                <div class="flex justify-between items-center mb-2 flex-wrap gap-2">
+                  <span class="text-xs font-mono font-semibold text-slate-300 uppercase tracking-wider" data-en="High-Throughput Batch Processing (GPU Benchmark)" data-ko="대규모 동시 요청 배치(Batch) 처리 성능 (GPU)" data-ja="高スループットバッチ処理性能 (GPU)">대규모 동시 요청 배치(Batch) 처리 성능 (GPU)</span>
+                </div>
+                <div class="overflow-x-auto rounded-lg border border-slate-800 bg-slate-900/40 p-1">
+                  <table class="w-full text-left text-xs font-sans border-collapse">
+                    <thead>
+                      <tr class="border-b border-slate-800 bg-slate-950/80 text-slate-300 font-semibold font-mono">
+                        <th class="py-2.5 px-3" data-en="Execution Mode / Batch Size" data-ko="동시 처리 방식 (Batch Size)" data-ja="処理方式 (Batch Size)">동시 처리 방식 (Batch Size)</th>
+                        <th class="py-2.5 px-3" data-en="Total Batch Latency" data-ko="총 소요 시간 (전체 묶음)" data-ja="総所要時間 (バッチ全体)">총 소요 시간 (전체 묶음)</th>
+                        <th class="py-2.5 px-3" data-en="Avg Latency / Sentence" data-ko="문장당 평균 처리 지연시간" data-ja="文あたり平均遅延">문장당 평균 처리 지연시간</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/60 text-slate-300 font-mono">
+                      <tr class="hover:bg-slate-800/30 transition-colors">
+                        <td class="py-2 px-3 text-slate-400" data-en="Sequential (1 sentence x 32)" data-ko="단건 순차 처리 (1개씩 32회)" data-ja="単件順次処理 (1件ずつ32回)">단건 순차 처리 (1개씩 32회)</td>
+                        <td class="py-2 px-3">~380 ms</td>
+                        <td class="py-2 px-3 text-slate-400">~11.8 ms</td>
+                      </tr>
+                      <tr class="hover:bg-slate-800/30 transition-colors">
+                        <td class="py-2 px-3 text-slate-300" data-en="Batch 4 (4 sentences concurrent)" data-ko="배치 처리 (Batch 4: 4문장 동시)" data-ja="バッチ処理 (Batch 4: 4文同時)">배치 처리 (Batch 4: 4문장 동시)</td>
+                        <td class="py-2 px-3">~16 ms</td>
+                        <td class="py-2 px-3">~4.0 ms</td>
+                      </tr>
+                      <tr class="hover:bg-slate-800/30 transition-colors">
+                        <td class="py-2 px-3 text-slate-300" data-en="Batch 16 (16 sentences concurrent)" data-ko="배치 처리 (Batch 16: 16문장 동시)" data-ja="バッチ処理 (Batch 16: 16文同時)">배치 처리 (Batch 16: 16문장 동시)</td>
+                        <td class="py-2 px-3">~28 ms</td>
+                        <td class="py-2 px-3">~1.7 ms</td>
+                      </tr>
+                      <tr class="hover:bg-slate-800/30 transition-colors">
+                        <td class="py-2 px-3 text-slate-300" data-en="Batch 32 (32 sentences concurrent)" data-ko="배치 처리 (Batch 32: 32문장 동시)" data-ja="バッチ処理 (Batch 32: 32文同時)">배치 처리 (Batch 32: 32문장 동시)</td>
+                        <td class="py-2 px-3">~42 ms</td>
+                        <td class="py-2 px-3">~1.3 ms</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
 
@@ -292,29 +332,39 @@
                 </div>
 
                 <!-- Head Tab Content 1: Korean -->
-                <div id="tab-head-content-kr" class="head-tab-content p-5 rounded-lg bg-slate-950/70 border border-slate-800 space-y-2">
-                  <span class="font-semibold text-slate-200 block text-base font-sans">🇰🇷 한국어: 4개 신경망 Head + 3개 규칙 모듈</span>
-                  <div class="text-sm text-slate-400 leading-relaxed font-sans space-y-1">
-                    <p>• <strong>신경망 Head (Neural Heads)</strong>: 형태소 분석 Head (93.5% BIO-POS vs MeCab 84.2%), 동철이의어/변음 Head (98.0% 경음화·연음), 수사 읽기 Head (99.45% 숫자/단위 구분), 기호 분류 Head (99.88% 기호/단위 분류)</p>
-                    <p>• <strong>규칙 모듈 (Rule Modules)</strong>: 조사 '의'→'에' 변환 규칙, 장단음 규칙, 번(番) 읽기 통합 규칙</p>
+                <div id="tab-head-content-kr" class="head-tab-content p-5 rounded-lg bg-slate-950/70 border border-slate-800 space-y-2.5">
+                  <div class="flex justify-between items-center flex-wrap gap-2">
+                    <span class="font-semibold text-slate-200 block text-base font-sans" data-en="🇰🇷 Korean: 2-Layer Phonology Engine & 4 Neural Probing Heads" data-ko="🇰🇷 한국어: 2-Layer 음운 엔진 & 4개 신경망 Head" data-ja="🇰🇷 韓国語: 2-Layer音韻エンジン & 4つの神経網Head">🇰🇷 한국어: 2-Layer 음운 엔진 & 4개 신경망 Head</span>
+                    <span class="text-[11px] font-mono text-slate-400 px-2.5 py-0.5 rounded bg-slate-800 border border-slate-700/60" data-en="10k Golden Baseline Verified" data-ko="1만 건 골든 데이터셋 전수 검증" data-ja="1万件ゴールデン検証済">1만 건 골든 데이터셋 전수 검증</span>
+                  </div>
+                  <div class="text-sm text-slate-400 leading-relaxed font-sans space-y-1.5 pt-1">
+                    <p>• <strong class="text-slate-200" data-en="2-Layer Phonology Engine (POS-First)" data-ko="2-Layer 음운 엔진 (POS-First)" data-ja="2-Layer音韻エンジン (POS-First)">2-Layer 음운 엔진 (POS-First)</strong>: <span data-en="Full coverage of 30 standard Korean pronunciation rules (National Institute of Korean Language). Resolves connective particle 'gwa' vs noun suffix '-kkwa', genitive 'ui' vs root 'ui', and natural loanwords (bus [뻐스], service [써비스])." data-ko="국립국어원 표준 발음법 30개 항 전수 지원. 접속조사 '과'([과]) vs 학과 명사 어근('문과'[문꽈]), 관형격 조사 '의'([에]) vs 명사 어간('의의'[이]) 정밀 분별 및 현실 외래어 발음(버스 [뻐스], 서비스 [써비스]) 지원." data-ja="国立国語院の標準発音法30項目を完全サポート。接続助詞と名詞語根、助詞「의」と名詞語幹を精密に弁別。">국립국어원 표준 발음법 30개 항 전수 지원. 접속조사 '과'([과]) vs 학과 명사 어근('문과'[문꽈]), 관형격 조사 '의'([에]) vs 명사 어간('의의'[이]) 정밀 분별 및 현실 외래어 발음(버스 [뻐스], 서비스 [써비스]) 지원.</span></p>
+                    <p>• <strong class="text-slate-200" data-en="Neural Probing Heads" data-ko="신경망 Probing Heads" data-ja="神経網 Probing Heads">신경망 Probing Heads</strong>: <span data-en="MorphHead (45 BIO-POS tags, 93.5% vs MeCab 84.2%), Number Head (99.45% Sino vs Native counters), Semiotic Head (99.88% unit/symbol classification), Zero-Shot English Word Reader." data-ko="형태소 Head (45개 BIO-POS 태그), 수사 판별 Head (99.45% 고유어/한자어 수사 및 50여 종 단위 분별), 기호/서식 분류 Head (99.88%), 미등록 영단어(OOV) 음절 분해 낭독 엔진." data-ja="形態素Head (45種BIO-POSタグ)、数詞判定Head (99.45% 固有語/漢字語数詞)、記号分類Head (99.88%)、未登録英単語音節分解読解エンジン。">형태소 Head (45개 BIO-POS 태그), 수사 판별 Head (99.45% 고유어/한자어 수사 및 50여 종 단위 분별), 기호/서식 분류 Head (99.88%), 미등록 영단어(OOV) 음절 분해 낭독 엔진.</span></p>
+                    <p>• <strong class="text-slate-200" data-en="Regression Testing Shield" data-ko="대규모 회귀 검증 체계" data-ja="大規模回帰検証体制">대규모 회귀 검증 체계</strong>: <span data-en="10,000-sentence Golden Baseline automated regression testing prevents unintended side-effects upon dictionary updates." data-ko="1만 건 규모의 표준 골든 베이스라인 전수 회귀 검증 프로세스로 신규 규칙/단어 등록 시의 부작용(Side-effect)을 사전에 검증 및 방지." data-ja="1万件規模のゴールデンベースライン自動回帰テストにより、辞書追加時の副作用を防止。">1만 건 규모의 표준 골든 베이스라인 전수 회귀 검증 프로세스로 신규 규칙/단어 등록 시의 부작용(Side-effect)을 사전에 검증 및 방지.</span></p>
                   </div>
                 </div>
 
                 <!-- Head Tab Content 2: Japanese -->
-                <div id="tab-head-content-ja" class="head-tab-content hidden p-5 rounded-lg bg-slate-950/70 border border-slate-800 space-y-2">
-                  <span class="font-semibold text-slate-200 block text-base font-sans">🇯🇵 日本語: 3つの神経網Head (MeCab-Free)</span>
-                  <div class="text-sm text-slate-400 leading-relaxed font-sans space-y-1">
-                    <p>• <strong>ニューラルHead (Neural Heads)</strong>: 形態素解析 Head (97.84% BIO-POS), Yomi 多義語 Head (92.43% 漢字読み), 記号分類 Head (98.30% 記号分類)</p>
-                    <p>• <strong>特徴 (Features)</strong>: 外部MeCab形態素解析器なしで事前学習BERTトークン単位で直接推論を実行</p>
+                <div id="tab-head-content-ja" class="head-tab-content hidden p-5 rounded-lg bg-slate-950/70 border border-slate-800 space-y-2.5">
+                  <div class="flex justify-between items-center flex-wrap gap-2">
+                    <span class="font-semibold text-slate-200 block text-base font-sans" data-en="🇯🇵 Japanese: 446-Class Kanji Yomi Head (MeCab-Free)" data-ko="🇯🇵 일본어: 446개 클래스 한자 Yomi Head (MeCab-Free)" data-ja="🇯🇵 日本語: 446クラス漢字Yomi Head (MeCab-Free)">🇯🇵 日本語: 446개 클래스 한자 Yomi Head (MeCab-Free)</span>
+                    <span class="text-[11px] font-mono text-slate-400 px-2.5 py-0.5 rounded bg-slate-800 border border-slate-700/60" data-en="Live Serving" data-ko="실시간 서빙 단계" data-ja="リアルタイム提供中">실시간 서빙 단계</span>
+                  </div>
+                  <div class="text-sm text-slate-400 leading-relaxed font-sans space-y-1.5 pt-1">
+                    <p>• <strong class="text-slate-200" data-en="Kanji Onyomi/Kunyomi Disambiguation" data-ko="한자 음/훈독 다의어 판별 Head" data-ja="漢字音訓多義語判定 Head">한자 음/훈독 다의어 판별 Head</strong>: <span data-en="446-class Kanji reading classifier ('1日': tsuitachi vs ichinichi, '人気': ninki vs hitoke) with 92.43% accuracy." data-ko="446개 클래스 한자 음/훈독 다의어 판별 Head 탑재 ('1日': ついたち vs いちにち / '人気': にんき vs ひとけ)." data-ja="446クラスの漢字音訓多義語判定Head搭載（「1日」: ついたち vs いちにち / 「人気」: にんき vs ひとけ）。">446개 클래스 한자 음/훈독 다의어 판별 Head 탑재 ('1日': ついたち vs いちにち / '人気': にんき vs ひとけ).</span></p>
+                    <p>• <strong class="text-slate-200" data-en="Native Japanese G2P Pipeline" data-ko="고유명사 사전 및 MeCab-Free 추론" data-ja="固有名詞辞書 & MeCab-Free推論">고유명사 사전 및 MeCab-Free 추론</strong>: <span data-en="Direct inference on frozen BERT tokens without external MeCab dependency, combined with single proper noun lexicon." data-ko="외부 MeCab 의존성 없이 사전학습 BERT 토큰 단위로 직접 추론하며 단일 고유명사 사전(JA_kanji_proper_nouns) 연동." data-ja="外部MeCab形態素解析器なしで事前学習BERTトークン単位で直接推論を実行、単一固有名詞辞書と連携。">외부 MeCab 의존성 없이 사전학습 BERT 토큰 단위로 직접 추론하며 단일 고유명사 사전(JA_kanji_proper_nouns) 연동.</span></p>
                   </div>
                 </div>
 
                 <!-- Head Tab Content 3: English -->
-                <div id="tab-head-content-en" class="head-tab-content hidden p-5 rounded-lg bg-slate-950/70 border border-slate-800 space-y-2">
-                  <span class="font-semibold text-slate-200 block text-base font-sans">🇺🇸 English: 2 Neural Heads</span>
-                  <div class="text-sm text-slate-400 leading-relaxed font-sans space-y-1">
-                    <p>• <strong>Neural Heads</strong>: Heteronym Disambiguation Head (98.79% accuracy), Semiotic Normalization Head (99.80% accuracy)</p>
-                    <p>• <strong>Features</strong>: Accurate verb/adjective pronunciation branching (e.g., 'live') and semiotic unit inverse normalization</p>
+                <div id="tab-head-content-en" class="head-tab-content hidden p-5 rounded-lg bg-slate-950/70 border border-slate-800 space-y-2.5">
+                  <div class="flex justify-between items-center flex-wrap gap-2">
+                    <span class="font-semibold text-slate-200 block text-base font-sans" data-en="🇺🇸 English: 173-Class Heteronym Head & Semiotic Normalizer" data-ko="🇺🇸 영어: 173개 클래스 Heteronym Head & Semiotic 정규화" data-ja="🇺🇸 英語: 173クラス Heteronym Head & Semiotic正規化">🇺🇸 영어: 173개 클래스 Heteronym Head & Semiotic 정규화</span>
+                    <span class="text-[11px] font-mono text-slate-400 px-2.5 py-0.5 rounded bg-slate-800 border border-slate-700/60" data-en="Live Serving" data-ko="실시간 서빙 단계" data-ja="リアルタイム提供中">실시간 서빙 단계</span>
+                  </div>
+                  <div class="text-sm text-slate-400 leading-relaxed font-sans space-y-1.5 pt-1">
+                    <p>• <strong class="text-slate-200" data-en="Heteronym Disambiguation Head" data-ko="동철이음이의어(Heteronym) 판별 Head" data-ja="同形異音異義語(Heteronym)判定 Head">동철이음이의어(Heteronym) 판별 Head</strong>: <span data-en="173-class part-of-speech and phonetic branching ('live' [/lɪv/] vs [/laɪv/], 'read' [/riːd/] vs [/rɛd/]) with 98.79% accuracy." data-ko="173개 클래스 Heteronym 문맥 발음 판별 Head 탑재 ('live' [/lɪv/] vs [/laɪv/], 'read' [/riːd/] vs [/rɛd/])." data-ja="173クラスの品詞・発音分岐判定Head搭載（'live' [/lɪv/] vs [/laɪv/], 'read' [/riːd/] vs [/rɛd/]）。">173개 클래스 Heteronym 문맥 발음 판별 Head 탑재 ('live' [/lɪv/] vs [/laɪv/], 'read' [/riːd/] vs [/rɛd/]).</span></p>
+                    <p>• <strong class="text-slate-200" data-en="CMUdict & Semiotic Normalization" data-ko="CMUdict 음운 변환 & 시맨틱 정규화" data-ja="CMUdict音韻変換 & Semiotic正規化">CMUdict 음운 변환 & 시맨틱 정규화</strong>: <span data-en="Full CMUdict phonetic dictionary integration with semiotic unit, currency, date, and W3C SSML formatting." data-ko="CMUdict 기반 정밀 발음 변환 및 통화/날짜/단위 시맨틱 기호 분별 및 W3C SSML 태그 출력 지원." data-ja="CMUdictに基づく精密な発音変換および通貨・日付・単位の記号弁別とW3C SSML出力をサポート。">CMUdict 기반 정밀 발음 변환 및 통화/날짜/단위 시맨틱 기호 분별 및 W3C SSML 태그 출력 지원.</span></p>
                   </div>
                 </div>
               </div>
@@ -360,7 +410,7 @@
                 <!-- Optimization & Acceleration -->
                 <div class="p-3.5 sm:flex sm:items-center sm:justify-between gap-4">
                   <span class="font-mono font-semibold text-slate-400 text-xs uppercase tracking-wider block sm:inline w-40" data-en="Optimization" data-ko="최적화 및 경량화" data-ja="最適化">최적화 및 경량화</span>
-                  <span class="mt-1 sm:mt-0 flex-1 text-slate-200 font-sans text-xs leading-relaxed" data-en="INT8 Quantization (~120MB Memory Footprint) / CUDA C++ Acceleration" data-ko="INT8 양자화 (~120MB 메모리 점유) / CUDA C++ 인퍼런스 가속" data-ja="INT8量子化（~120MBメモリ占유） / CUDA C++推論加速">
+                  <span class="mt-1 sm:mt-0 flex-1 text-slate-200 font-sans text-xs leading-relaxed" data-en="INT8 Quantization (~120MB Memory Footprint) / CUDA C++ Acceleration" data-ko="INT8 양자화 (~120MB 메모리 점유) / CUDA C++ 인퍼런스 가속" data-ja="INT8量子化（~120MBメモリ占有） / CUDA C++推論加速">
                     INT8 양자화 (~120MB 메모리 점유) / CUDA C++ 인퍼런스 가속
                   </span>
                 </div>
@@ -517,7 +567,7 @@
                   </div>
                   <div class="text-xs text-slate-400 space-y-1 font-mono">
                     <p><span data-en="• Spoken Input: 'twenty-five hundred dollars payment / one hundred fifty thousand euros transfer'" data-ko="• 발화 입력: '삼천오백원 결제 / 십오만달러 송금'" data-ja="• 発話入力: 'さんぜんごひゃくえんけっさい / じゅうごまんどるそうきん'">• <strong>발화 입력</strong>: "삼천오백원 결제 / 십오만달러 송금"</span></p>
-                    <p><span data-en="• Default Normalization: '$2,500 / €150,000'" data-ko="• 표준 기본 변환: '3,500원 / $150,000'" data-ja="• 표준変換: '3,500円 / $150,000'">• <strong>표준 기본 변환</strong>: "3,500원 / $150,000"</span></p>
+                    <p><span data-en="• Default Normalization: '$2,500 / €150,000'" data-ko="• 표준 기본 변환: '3,500원 / $150,000'" data-ja="• 標準変換: '3,500円 / $150,000'">• <strong>표준 기본 변환</strong>: "3,500원 / $150,000"</span></p>
                     <p class="text-slate-200 font-semibold"><span data-en="• Custom Target Format: '2,500 USD / 150,000 EUR'" data-ko="• 커스텀 설정 변환: '3,500 KRW / 150,000 USD'" data-ja="• カスタム設定変換: '3,500 JPY / 150,000 USD'">• ⚙️ <strong>커스텀 설정 변환</strong>: "<u class="underline decoration-slate-500">3,500 KRW</u> / <u class="underline decoration-slate-500">150,000 USD</u>"</span></p>
                   </div>
                 </div>
@@ -580,7 +630,7 @@
                 <span class="text-xs font-mono text-slate-400 px-2.5 py-1 rounded bg-slate-800">🇰🇷 Korean Release / Multilingual Roadmap</span>
               </div>
               <p class="text-sm text-slate-400 leading-relaxed">
-                <span data-en="While the core SNAP engine fully supports 3 languages (Korean, English, Japanese), SNAP-ITN leads with a production-ready Korean release, with Japanese and English ITN engines under active roadmap development." data-ko="핵심 SNAP 엔진은 3개국어(한국어·영어·일본어) 정규화를 완벽 지원하며, 역정규화 엔진인 SNAP-ITN은 현재 한국어를 선행 정식 지원하고 일/영어 확장을 진행 중입니다." data-ja="核心SNAPエンジンは3言語（韓国語・英語・日本語）正規化を完全サポートし、逆正規化エンジンSNAP-ITNは現在韓国語を先行正式サポートし日/英語拡張を進行中です。">핵심 SNAP 엔진은 3개국어(한국어·영어·일본어) 정규화를 완벽 지원하며, 역정규화 엔진인 SNAP-ITN은 현재 한국어를 선행 정식 지원하고 일/영어 확장을 진행 중입니다.</span>
+                <span data-en="While the core SNAP engine provides comprehensive support for 3 languages (Korean, English, Japanese), SNAP-ITN leads with a production-ready Korean release, with Japanese and English ITN engines under active roadmap development." data-ko="핵심 SNAP 엔진은 3개국어(한국어·영어·일본어) 정규화를 체계적으로 지원하며, 역정규화 엔진인 SNAP-ITN은 현재 한국어를 선행 정식 지원하고 일/영어 확장을 진행 중입니다." data-ja="核心SNAPエンジンは3言語（韓国語・英語・日本語）正規化を体系的にサポートし、逆正規化エンジンSNAP-ITNは現在韓国語を先行正式サポートし日/英語拡張を進行中です。">핵심 SNAP 엔진은 3개국어(한국어·영어·일본어) 정규화를 체계적으로 지원하며, 역정규화 엔진인 SNAP-ITN은 현재 한국어를 선행 정식 지원하고 일/영어 확장을 진행 중입니다.</span>
               </p>
 
               <div class="grid gap-3 text-sm pt-2">
@@ -593,7 +643,7 @@
                   <p class="text-xs text-slate-400 leading-relaxed"><span data-en="Performs real-time Semantic Preservation Verification by comparing pre- and post-conversion BERT hidden representations, probability distributions, and N-gram perplexity. If ambiguity is detected, it safely rolls back to raw audio transcript to prevent numeric hallucination." data-ko="신경망 인퍼런스 확률, N-gram Perplexity, 그리고 변환 전후 BERT Hidden Representation의 코사인 유사도를 실시간으로 검증(Semantic Preservation Verification)합니다. 불확실성이나 의미 발산이 검출되면 원본 음성 텍스트로 안전하게 롤백하여 수치 변환의 데이터 무결성을 유지합니다." data-ja="推論確率、N-gram Perplexity、および変換前後のBERT隠れ表現の類似性をリアルタイム検証（Semantic Preservation Verification）します。不確実性が検出されると、元の音声テキストに安全にロールバックし数値データの整合性を維持します。">신경망 인퍼런스 확률, N-gram Perplexity, 그리고 변환 전후 BERT Hidden Representation의 코사인 유사도를 실시간으로 검증(Semantic Preservation Verification)합니다. 불확실성이나 의미 발산이 검출되면 원본 음성 텍스트로 안전하게 롤백하여 수치 변환의 데이터 무결성을 유지합니다.</span></p>
                 </div>
                 <div class="p-4 rounded-md bg-slate-950/70 border border-slate-800 space-y-1.5">
-                  <span class="font-semibold text-slate-200 block text-base font-sans"><span data-en="3. Performance Benchmark" data-ko="3. 성능 벤치마크" data-ja="3. 性能ベンチマーク">3. 성능 ベンチマーク</span></span>
+                  <span class="font-semibold text-slate-200 block text-base font-sans"><span data-en="3. Performance Benchmark" data-ko="3. 성능 벤치마크" data-ja="3. 性能ベンチマーク">3. 성능 벤치마크</span></span>
                   <p class="text-xs text-slate-400 leading-relaxed"><span data-en="Achieved 99.96% Effective Pass Rate across 34,281 large-scale sentences and 300 hard benchmark test cases (CPU 10ms / GPU CUDA 0.23ms ultra-low latency)." data-ko="34,281 문장 대용량 코퍼스 및 300건의 고난도 벤치마크 테스트에서 99.96% Effective Pass Rate 달성 (CPU 10ms / GPU CUDA 0.23ms 초저지연)." data-ja="34,281文の大規模コーパスおよび300件の難関ベンチマークで99.96% Effective Pass Rate達成 (CPU 10ms / GPU CUDA 0.23ms超低遅延)。">34,281 문장 대용량 코퍼스 및 300건의 고난도 벤치마크 테스트에서 <strong>99.96% Effective Pass Rate</strong> 달성 (CPU 10ms / GPU CUDA 0.23ms 초저지연).</span></p>
                 </div>
               </div>
@@ -610,25 +660,15 @@
             
             <!-- App 0: Text Normalization Live Demo (Hugging Face) -->
             <div id="app-live-demo" class="p-6 rounded-lg border border-slate-800 bg-slate-900/20 space-y-5 scroll-mt-24">
-              <div>
+              <div class="flex justify-between items-center flex-wrap gap-2">
                 <h3 class="text-base font-semibold text-slate-200">
                   <span data-en="Text Normalization Live Demo" data-ko="실시간 텍스트 정규화 데모" data-ja="リアルタイムテキスト正規化デモ">실시간 텍스트 정규화 데모</span>
                 </h3>
+                <span class="text-xs font-mono text-slate-400 px-2.5 py-1 rounded bg-slate-800 border border-slate-700/60">Hugging Face Space</span>
               </div>
               <p class="text-sm text-slate-400 leading-relaxed">
                 <span data-en="An interactive demo on Hugging Face Spaces for testing SNAP Native C++ engine's Text Normalization (TN) and G2P inference. Supports phonetic conversion and SSML output across Korean, English, and Japanese." data-ko="Hugging Face Spaces 환경에서 SNAP Native C++ 엔진 기반의 텍스트 정규화(TN) 및 G2P 추론을 직접 테스트할 수 있는 대화형 데모입니다. 한국어, 영어, 일본어의 발음 변환 및 SSML 출력을 지원합니다." data-ja="Hugging Face Spaces環境でSNAP Native C++エンジン基盤のテキスト正規化(TN)およびG2P推論をテストできるインタラクティブデモです。韓国語、英語、日本語の発音変換およびSSML出力に対応しています。">Hugging Face Spaces 환경에서 SNAP Native C++ 엔진 기반의 텍스트 정규화(TN) 및 G2P 추론을 직접 테스트할 수 있는 대화형 데모입니다. 한국어, 영어, 일본어의 발음 변환 및 SSML 출력을 지원합니다.</span>
               </p>
-
-              <!-- Demo Preview Image with Modal Zoom -->
-              <div class="relative group overflow-hidden rounded-lg border border-slate-800 bg-slate-950 p-1.5 transition-colors duration-200 hover:border-slate-700 cursor-pointer" onclick="openImageModal('img/snap_demo_huggingface.png')">
-                <img src="img/snap_demo_huggingface.png" alt="SNAP Text Normalization Live Demo Interface" class="w-full h-auto rounded opacity-90 transition-opacity duration-200 group-hover:opacity-100 max-w-xl mx-auto">
-                <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
-                  <span class="bg-slate-900/90 text-slate-200 text-xs font-mono px-3.5 py-1.5 rounded border border-slate-700 shadow-md flex items-center gap-1.5">
-                    <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
-                    <span data-en="Click to Enlarge Image" data-ko="클릭하여 이미지 크게 보기" data-ja="クリックで拡大表示">클릭하여 이미지 크게 보기</span>
-                  </span>
-                </div>
-              </div>
 
               <!-- Button CTA -->
               <div class="pt-1 flex justify-end">
@@ -639,34 +679,55 @@
               </div>
             </div>
 
-                        <!-- SNAP + MeloTTS Live Voice Demo Card (#app-voice-demo) -->
+            <!-- SNAP + Open-Source Voice Ecosystem Live Demos (#app-voice-demo) -->
             <div id="app-voice-demo" class="p-6 rounded-lg border border-slate-800 bg-slate-900/20 space-y-5 scroll-mt-24">
               <div class="flex justify-between items-center flex-wrap gap-2">
                 <h3 class="text-base font-semibold text-slate-200 flex items-center gap-2">
-                  <span data-en="SNAP + MeloTTS Real-time Speech Synthesis Demo" data-ko="SNAP + MeloTTS 음성 합성 실시간 데모" data-ja="SNAP + MeloTTS 音声合成 リアルタイムデモ">SNAP + MeloTTS 음성 합성 실시간 데모</span>
+                  <span data-en="SNAP + Open-Source Voice Synthesis (Korean Live Demos)" data-ko="SNAP + 오픈소스 음성 합성 한국어 실시간 데모" data-ja="SNAP + オープンソース音声合成 韓国語リアルタイムデモ">SNAP + 오픈소스 음성 합성 한국어 실시간 데모</span>
                 </h3>
-                <span class="text-xs font-mono text-slate-400 px-2.5 py-1 rounded bg-slate-800 border border-slate-700/60">Hugging Face Space</span>
               </div>
               <p class="text-sm text-slate-400 leading-relaxed">
-                <span data-en="Interactive Hugging Face Space integrating SNAP Frontend with MeloTTS for real-time context-aware speech synthesis." data-ko="SNAP Frontend와 MeloTTS/BERT-VITS2를 결합하여 문맥 의존 고품질 음성을 실시간 합성하는 인터랙티브 허깅페이스 데모입니다." data-ja="SNAP FrontendとMeloTTSを結合し、文脈依存の高音質音声をリアルタイム合成するインタラクティブなHugging Faceデモです。">SNAP Frontend와 MeloTTS/BERT-VITS2를 결합하여 문맥 의존 고품질 음성을 실시간 합성하는 인터랙티브 허깅페이스 데모입니다.</span>
+                <span data-en="Interactive Hugging Face Spaces integrating SNAP Frontend across leading open-source TTS models (MeloTTS, Piper VITS, and F5-TTS Flow Matching) for context-aware, zero-hallucination speech synthesis." data-ko="SNAP Frontend를 주요 글로벌 오픈소스 TTS 모델(MeloTTS, Piper VITS, F5-TTS Flow Matching)과 결합하여 문맥 의존 고품질 음성 및 Zero-Shot 보이스 클로닝을 실시간 합성하는 인터랙티브 데모입니다." data-ja="SNAP Frontendを主要オープンソースTTSモデル（MeloTTS, Piper VITS, F5-TTS）と結合し、文脈依存の高音質音声およびZero-Shot音声クローニングをリアルタイム合成するデモです。">SNAP Frontend를 주요 글로벌 오픈소스 TTS 모델(MeloTTS, Piper VITS, F5-TTS Flow Matching)과 결합하여 문맥 의존 고품질 음성 및 Zero-Shot 보이스 클로닝을 실시간 합성하는 인터랙티브 데모입니다.</span>
               </p>
 
-              <!-- Demo Preview Image with Modal Zoom -->
-              <div class="relative group overflow-hidden rounded-lg border border-slate-800 bg-slate-950 p-1.5 transition-colors duration-200 hover:border-slate-700 cursor-pointer" onclick="openImageModal('img/snap_voice_demo_hf.png')">
-                <img src="img/snap_voice_demo_hf.png" alt="SNAP Voice Live Demo Preview" class="w-full h-auto rounded opacity-90 transition-opacity duration-200 group-hover:opacity-100 max-w-xl mx-auto">
-                <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
-                  <span class="bg-slate-900/90 text-slate-200 text-xs font-mono px-3.5 py-1.5 rounded border border-slate-700 shadow-md flex items-center gap-1.5">
-                    <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
-                    <span data-en="Click to Enlarge Image" data-ko="클릭하여 이미지 크게 보기" data-ja="クリックで拡大表示">클릭하여 이미지 크게 보기</span>
-                  </span>
+              <!-- Open-Source Voice Demo Cards (Vertical Stack) -->
+              <div class="space-y-3 pt-1">
+                <!-- Subcard 1: MeloTTS -->
+                <div class="p-4 rounded-lg border border-slate-800 bg-slate-950/70 space-y-2 transition-colors hover:border-slate-700">
+                  <div class="flex justify-between items-center flex-wrap gap-2">
+                    <span class="text-sm font-semibold text-slate-200 font-sans">MeloTTS</span>
+                    <a href="https://huggingface.co/spaces/softguy777/snap_voice_demo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono border border-slate-700 transition-colors">
+                      <span>MeloTTS Demo ↗</span>
+                    </a>
+                  </div>
+                  <p class="text-xs text-slate-400 leading-relaxed font-sans" data-en="RoBERTa backbone hidden states reuse for zero additional compute overhead in real-time streaming synthesis." data-ko="RoBERTa 백본 Hidden States 공유로 추가 연산 오버헤드 없이 실시간 스트리밍 음성을 합성합니다." data-ja="RoBERTaバックボーン共有で追加オーバーヘッドなくリアルタイムストリーミング合成を実行します。">RoBERTa 백본 Hidden States 공유로 추가 연산 오버헤드 없이 실시간 스트리밍 음성을 합성합니다.</p>
+                </div>
+
+                <!-- Subcard 2: Piper VITS -->
+                <div class="p-4 rounded-lg border border-slate-800 bg-slate-950/70 space-y-2 transition-colors hover:border-slate-700">
+                  <div class="flex justify-between items-center flex-wrap gap-2">
+                    <span class="text-sm font-semibold text-slate-200 font-sans">Piper VITS</span>
+                    <a href="https://huggingface.co/spaces/softguy777/snap_voice_demo2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono border border-slate-700 transition-colors">
+                      <span>Piper Demo ↗</span>
+                    </a>
+                  </div>
+                  <p class="text-xs text-slate-400 leading-relaxed font-sans" data-en="Lightweight on-device TTS. Overcomes legacy espeak-ng pronunciation limits across 22 Korean voices." data-ko="초경량 온디바이스 TTS. 기존 espeak-ng의 발음 한계를 극복하고 22개 화자 스타일을 지원합니다." data-ja="超軽量オンデバイスTTS。espeak-ngの限界を克服し22話者スタイルをサポートします。">초경량 온디바이스 TTS. 기존 espeak-ng의 발음 한계를 극복하고 22개 화자 스타일을 지원합니다.</p>
+                </div>
+
+                <!-- Subcard 3: F5-TTS (Zero-Shot) -->
+                <div class="p-4 rounded-lg border border-slate-800 bg-slate-950/70 space-y-2 transition-colors hover:border-slate-700">
+                  <div class="flex justify-between items-center flex-wrap gap-2">
+                    <span class="text-sm font-semibold text-slate-200 font-sans">F5-TTS Diffusion</span>
+                    <a href="https://huggingface.co/spaces/softguy777/snap_voice_demo3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono border border-slate-700 transition-colors">
+                      <span>F5-TTS Demo ↗</span>
+                    </a>
+                  </div>
+                  <p class="text-xs text-slate-400 leading-relaxed font-sans" data-en="Flow Matching diffusion TTS. Supports 16 preset voices and Zero-Shot Voice Cloning from reference audio." data-ko="Flow Matching 확산 모델. 16개 프리셋 화자 및 참조 음성 기반 Zero-Shot 보이스 클로닝을 지원합니다." data-ja="Flow Matching拡散モデル。16プリセットおよび参照音声からのゼロショット音声クローニングをサポートします。">Flow Matching 확산 모델. 16개 프리셋 화자 및 참조 음성 기반 Zero-Shot 보이스 클로닝을 지원합니다.</p>
                 </div>
               </div>
 
-              <!-- Action Buttons -->
-              <div class="pt-1 flex justify-end items-center gap-3 flex-wrap">
-                <a href="https://huggingface.co/spaces/softguy777/snap_voice_demo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono border border-slate-700 transition-colors">
-                  <span data-en="SNAP + MeloTTS Real-time Demo ↗" data-ko="SNAP + MeloTTS 실시간 음성 데모 ↗" data-ja="SNAP + MeloTTS リアルタイム音声デモ ↗">SNAP + MeloTTS 실시간 음성 데모 ↗</span>
-                </a>
+              <!-- GitHub Action Link -->
+              <div class="pt-1 flex justify-end">
                 <a href="https://github.com/snap-libs/snap_voice" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono border border-slate-700 transition-colors">
                   <svg class="w-3.5 h-3.5 text-slate-400" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                   <span data-en="SnapVoice GitHub Repo ↗" data-ko="SnapVoice 저장소 ↗" data-ja="SnapVoice リポジトリ ↗">SnapVoice 저장소 ↗</span>
@@ -878,8 +939,7 @@
                   <span class="text-[11px] font-mono text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">ONNX INT8 / BERT Cache</span>
                 </div>
                 <p class="text-xs text-slate-400 leading-relaxed pt-1">
-                  <span data-en="The demos above were generated by integrating SNAP Frontend with open-source BERT-embedded TTS (e.g. BERT-VITS2 / MeloTTS). By caching the BERT Hidden Layer representations computed during the initial pass and sharing them 100% with SNAP neural heads and speech decoders, context-aware phonetic synthesis is achieved with near-zero additional computational overhead (~0ms). For TTS models without built-in BERT backbones, SNAP utilizes ONNX INT8 quantization to guarantee real-time performance. Integrations with other TTS backbones will be released sequentially." data-ko="위 예제는 SNAP Frontend와 오픈소스 MeloTTS/BERT-VITS2를 결합하여 제작되었습니다. MeloTTS/BERT-VITS2에서 이미 연산하는 BERT 모델의 Hidden Layer 값을 단 1회 계산 후 캐싱(Cache)하여 음성 디코더 및 SNAP의 신경망 Head들에 100% 공유함으로써, BERT 추가 재계산 없이 거의 0에 가까운 오버헤드(~0ms)로 문맥과 의미에 따른 정교한 발음을 실시간 합성합니다. BERT가 내장되지 않은 기존 일반 TTS 모델과 결합하더라도 BERT를 ONNX INT8 양자화하여 적용하므로 실시간(Real-time) 처리가 충분히 가능합니다. 다른 TTS 모델들과의 결합은 추후 공개될 예정입니다." data-ja="上記例はSNAP FrontendとオープンソースMeloTTS/BERT-VITS2を結合して製作されました。BERTのHidden Layer表現を一度計算してキャッシュ（Cache）共有することで、BERT再計算なしで実質ゼロオーバヘッド（~0ms）で精密な発音をリアルタイム合成します。BERTが内蔵されていない既存TTSモデルと結合する場合でも、BERTをONNX INT8量子化して適用するためリアルタイム処理が充分に可能です。他のTTSモデルとの結合は順次公開予定です。">위 예제는 SNAP Frontend와 오픈소스 MeloTTS/BERT-VITS2를 결합하여 제작되었습니다. MeloTTS/BERT-VITS2에서 이미 연산하는 BERT 모델의 Hidden Layer 값을 단 1회 계산 후 캐싱(Cache)하여 음성 디코더 및 SNAP의 신경망 Head들에 100% 공유함으로써, BERT 추가 재계산 없이 거의 0에 가까운 오버헤드(~0ms)로 문맥과 의미에 따른 정교한 발음을 실시간 합성합니다. BERT가 내장되지 않은 기존 일반 TTS 모델과 결합하더라도 BERT를 ONNX INT8 양자화하여 적용하므로 실시간(Real-time) 처리가 충분히 가능합니다. 다른 TTS 모델들과의 결합은 추후 공개될 예정입니다.</span>
-                </p>
+                  <span data-en="The demos above were generated by integrating SNAP Frontend with open-source BERT-embedded TTS (e.g. BERT-VITS2 / MeloTTS). By caching the BERT Hidden Layer representations computed during the initial pass and sharing them with SNAP neural heads and speech decoders, context-aware phonetic synthesis is achieved with minimal computational overhead. For TTS models without built-in BERT backbones, SNAP utilizes ONNX INT8 quantization to ensure efficient real-time execution. Integrations with other TTS backbones will be released sequentially." data-ko="위 예제는 SNAP Frontend와 오픈소스 MeloTTS/BERT-VITS2를 결합하여 제작되었습니다. MeloTTS/BERT-VITS2에서 이미 연산하는 BERT 모델의 Hidden Layer 값을 단 1회 계산 후 캐싱(Cache)하여 음성 디코더 및 SNAP의 신경망 Head들에 연계·공유함으로써, BERT 추가 재계산 없이 최소한의 오버헤드로 문맥과 의미에 따른 정교한 발음을 실시간 합성합니다. BERT가 내장되지 않은 기존 일반 TTS 모델과 결합하더라도 BERT를 ONNX INT8 양자화하여 적용하므로 실시간(Real-time) 처리가 원활합니다. 다른 TTS 모델들과의 결합은 추후 공개될 예정입니다." data-ja="上記例はSNAP FrontendとオープンソースMeloTTS/BERT-VITS2を結合して製作されました。BERTのHidden Layer表現を一度計算してキャッシュ（Cache）共有することで、BERT再計算の負荷を抑えて精密な発音をリアルタイム合成します。BERTが内蔵されていない既存TTSモデルと結合する場合でも、BERTをONNX INT8量子化して適用するためリアルタイム処理が可能です。他のTTSモデルとの結合は順次公開予定です。">위 예제는 SNAP Frontend와 오픈소스 MeloTTS/BERT-VITS2를 결합하여 제작되었습니다. MeloTTS/BERT-VITS2에서 이미 연산하는 BERT 모델의 Hidden Layer 값을 단 1회 계산 후 캐싱(Cache)하여 음성 디코더 및 SNAP의 신경망 Head들에 연계·공유함으로써, BERT 추가 재계산 없이 최소한의 오버헤드로 문맥과 의미에 따른 정교한 발음을 실시간 합성합니다. BERT가 내장되지 않은 기존 일반 TTS 모델과 결합하더라도 BERT를 ONNX INT8 양자화하여 적용하므로 실시간(Real-time) 처리가 원활합니다. 다른 TTS 모델들과의 결합은 추후 공개될 예정입니다.</span>
                 </p>
               </div>
             </div>
@@ -1107,35 +1167,40 @@
             </p>
 
 
-                        <!-- ResearchGate Technical Paper -->
+            <!-- SNAP Technical White Paper Card -->
             <div class="p-5 rounded-lg border border-slate-800 bg-slate-900/30 space-y-3 transition-colors hover:border-slate-700">
               <div class="flex justify-between items-start flex-wrap gap-2">
                 <div>
                   <div class="text-sm font-semibold text-slate-200 flex items-center gap-2">
-                    <span data-en="SNAP Technical Paper" data-ko="SNAP 기술 논문" data-ja="SNAP 技術論文">SNAP 기술 논문</span>
+                    <span data-en="SNAP Technical White Paper (v1.0.0)" data-ko="SNAP 기술 백서 (Technical White Paper v1.0.0)" data-ja="SNAP 技術白書 (v1.0.0)">SNAP 기술 백서 (Technical White Paper v1.0.0)</span>
+                    <span class="text-[10px] font-mono text-slate-400 px-2 py-0.5 rounded bg-slate-800 border border-slate-700/60">August 2026</span>
                   </div>
                   <div class="text-xs text-slate-400 font-sans mt-1 leading-normal">
-                    SNAP: Semantic Normalization via Attached Probes for Multilingual Real-Time Text-to-Speech
+                    SNAP: Semantic Normalization via Attached Probes for Real-Time Multilingual TTS & ITN
                   </div>
                 </div>
               </div>
               <div class="pt-1 flex items-center gap-3 flex-wrap text-xs font-mono">
-                <a href="https://www.researchgate.net/publication/412123677_SNAP_Semantic_Normalization_via_Attached_Probes_for_Multilingual_Real-Time_Text-to-Speech" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-colors">
-                  <span data-en="View on ResearchGate" data-ko="ResearchGate에서 보기" data-ja="ResearchGateで見る">ResearchGate에서 보기</span>
+                <a href="https://github.com/snap-libs/snap_voice/blob/main/docs/SNAP_White_Paper_KO.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-colors">
+                  <span data-en="Read White Paper (KO)" data-ko="백서 전문 읽기 (한국어)" data-ja="白書を読む (韓国語)">백서 전문 읽기 (한국어)</span>
+                  <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                </a>
+                <a href="https://github.com/snap-libs/snap_voice/blob/main/docs/SNAP_White_Paper.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-colors">
+                  <span data-en="Read White Paper (EN)" data-ko="백서 전문 읽기 (English)" data-ja="白書を読む (英語)">백서 전문 읽기 (English)</span>
                   <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                 </a>
                 <a href="docs/snap_technical_whitepaper.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-colors">
-                  <span data-en="Read PDF Paper" data-ko="PDF 전문 읽기" data-ja="PDF全文を読む">PDF 전문 읽기</span>
+                  <span data-en="PDF Paper" data-ko="PDF 논문" data-ja="PDF論文">PDF 논문</span>
                   <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                 </a>
               </div>
             </div>
 
-            <!-- git snap -->
+            <!-- git snap_voice (Python & Voice Ecosystem) -->
             <a href="https://github.com/snap-libs/snap_voice" target="_blank" class="p-5 rounded-lg border border-slate-800 bg-slate-900/30 hover:border-slate-700 flex justify-between items-center transition-colors">
               <div>
-                <div class="text-sm font-semibold text-slate-200">git snap</div>
-                <div class="text-xs text-slate-400 font-mono mt-1">SNAP C++ Binaries, Library & Model Weights</div>
+                <div class="text-sm font-semibold text-slate-200">git snap_voice</div>
+                <div class="text-xs text-slate-400 font-mono mt-1">SNAP Voice Frontend, MeloTTS, Piper, F5-TTS Integration & Docs</div>
               </div>
               <span class="text-sm font-mono text-slate-300">GitHub →</span>
             </a>
@@ -1162,18 +1227,7 @@
 
           <div class="p-6 rounded-lg border border-slate-800 bg-slate-900/30 space-y-4">
             <div class="flex justify-between items-center flex-wrap gap-2">
-              <h3 class="text-base font-semibold text-slate-200 font-sans" data-en="License & Dual Licensing" data-ko="라이선스 및 듀얼 라이선스" data-ja="ライセンス & デュアルライセンス">라이선스 및 듀얼 라이선스</h3>
-              <span class="text-xs font-mono text-emerald-400 px-2.5 py-1 rounded bg-emerald-950/60 border border-emerald-800/60">GNU AGPLv3 / Commercial</span>
-            </div>
-            
-            <p class="text-xs text-slate-400 leading-relaxed font-sans">
-              <span data-en="SNAP is distributed under a Dual License model: free for open-source and research under the GNU Affero General Public License v3 (AGPL-3.0). For proprietary, closed-source commercial applications or cloud TTS services, commercial licenses are available upon request." data-ko="SNAP은 듀얼 라이선스(Dual License) 모델을 따릅니다: 오픈소스 및 연구 목적은 GNU AGPLv3 라이선스 하에 무료로 제공됩니다. 비공개 상용 제품 탑재 및 독점 클라우드 TTS 서비스를 원하시는 기업은 별도의 상용 라이선스를 문의해 주시기 바랍니다." data-ja="SNAPはデュアルライセンスモデルを採用しています。オープンソースおよび研究目的はGNU AGPLv3ライセンスの下で無償でご利用いただけます。非公開商用製品への組み込みや独占クラウドTTSサービスをご希望の企業様は、別途商用ライセンスをお問い合わせください。">SNAP은 듀얼 라이선스(Dual License) 모델을 따릅니다: 오픈소스 및 연구 목적은 GNU AGPLv3 라이선스 하에 무료로 제공됩니다. 비공개 상용 제품 탑재 및 독점 클라우드 TTS 서비스를 원하시는 기업은 별도의 상용 라이선스를 문의해 주시기 바랍니다.</span>
-            </p>
-          </div>
-
-          <div class="p-6 rounded-lg border border-slate-800 bg-slate-900/30 space-y-4">
-            <div class="flex justify-between items-center flex-wrap gap-2">
-              <h3 class="text-base font-semibold text-slate-200 font-sans" data-en="Contact & Commercial Inquiries" data-ko="문의 및 상용 라이선스 연락처" data-ja="お問い合わせ & 商用ライセンス窓口">문의 및 상용 라이선스 연락처</h3>
+              <h3 class="text-base font-semibold text-slate-200 font-sans" data-en="Contact" data-ko="연락처" data-ja="お問い合わせ">연락처</h3>
               <span class="text-xs font-mono text-slate-400 px-2.5 py-1 rounded bg-slate-800">Email</span>
             </div>
             
