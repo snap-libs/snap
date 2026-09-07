@@ -71,7 +71,7 @@
                 <a class="group flex items-center py-2" href="#applications"><span class="nav-indicator"></span><span class="nav-text"><span data-en="Applications & Demos" data-ko="응용 예시 및 데모" data-ja="応用例とデモ">응용 예시 및 데모</span></span></a>
                 <ul class="pl-6 space-y-0.5 text-xs">
                   <li><a class="group flex items-center py-1.5" href="#app-live-demo"><span class="nav-indicator"></span><span class="nav-text"><span data-en="Text Normalization Live Demo" data-ko="실시간 텍스트 정규화 데모" data-ja="リアルタイムテキスト正規化デモ">실시간 텍스트 정규화 데모</span></span></a></li>
-                  <li><a class="group flex items-center py-1.5" href="#app-voice-demo"><span class="nav-indicator"></span><span class="nav-text"><span data-en="Open-Source Voice Demos" data-ko="오픈소스 음성 합성 데모" data-ja="オープンソース音声合成デモ">오픈소스 음성 합성 데모</span></span></a></li>
+                  <li><a class="group flex items-center py-1.5" href="#app-voice-demo"><span class="nav-indicator"></span><span class="nav-text"><span data-en="Live Voice Demos (Edge-TTS)" data-ko="실시간 음성 합성 데모 (Edge-TTS)" data-ja="リアルタイム音声合成デモ (Edge-TTS)">실시간 음성 합성 데모 (Edge-TTS)</span></span></a></li>
                   <li><a class="group flex items-center py-1.5" href="#app-tts"><span class="nav-indicator"></span><span class="nav-text"><span data-en="TTS Voice Integration" data-ko="TTS 음성 합성 통합" data-ja="TTS音声合成統合">TTS 음성 합성 통합</span></span></a></li>
                   <li><a class="group flex items-center py-1.5" href="#app-dubbing"><span class="nav-indicator"></span><span class="nav-text"><span data-en="AI Video Dubbing" data-ko="AI 비디오 더빙" data-ja="AI吹き替え">AI 비디오 더빙</span></span></a></li>
                   <li><a class="group flex items-center py-1.5" href="#app-itn"><span class="nav-indicator"></span><span class="nav-text"><span data-en="STT ITN Engine" data-ko="STT 역정규화 (SNAP-ITN)" data-ja="STT逆正規化">STT 역정규화 (SNAP-ITN)</span></span></a></li>
@@ -684,46 +684,61 @@
             <div id="app-voice-demo" class="p-6 rounded-lg border border-slate-800 bg-slate-900/20 space-y-5 scroll-mt-24">
               <div class="flex justify-between items-center flex-wrap gap-2">
                 <h3 class="text-base font-semibold text-slate-200 flex items-center gap-2">
-                  <span data-en="SNAP + Open-Source Voice Synthesis (Korean Live Demos)" data-ko="SNAP + 오픈소스 음성 합성 한국어 실시간 데모" data-ja="SNAP + オープンソース音声合成 韓国語リアルタイムデモ">SNAP + 오픈소스 음성 합성 한국어 실시간 데모</span>
+                  <span data-en="SNAP + Voice Synthesis Live Demos (Korean)" data-ko="SNAP + 음성 합성 한국어 실시간 데모" data-ja="SNAP + 音声合成 韓国語リアルタイムデモ">SNAP + 음성 합성 한국어 실시간 데모</span>
                 </h3>
+                <span class="text-[11px] font-mono text-emerald-400 px-2.5 py-0.5 rounded bg-emerald-950/60 border border-emerald-800/60" data-en="Interactive Live Demos" data-ko="대화형 라이브 데모" data-ja="インタラクティブデモ">대화형 라이브 데모</span>
               </div>
-              <p class="text-sm text-slate-400 leading-relaxed">
-                <span data-en="Interactive Hugging Face Spaces integrating SNAP Frontend across leading open-source and neural TTS models (Edge-TTS, Piper VITS, and F5-TTS Flow Matching) for context-aware, zero-hallucination speech synthesis." data-ko="SNAP Frontend를 주요 오픈소스 및 신경망 TTS 모델(Edge-TTS, Piper VITS, F5-TTS Flow Matching)과 결합하여 문맥 의존 고품질 음성 및 Zero-Shot 보이스 클로닝을 실시간 합성하는 인터랙티브 데모입니다." data-ja="SNAP Frontendを主要オープンソースおよび神経網TTSモデル（Edge-TTS, Piper VITS, F5-TTS）と結合し、文脈依存の高音質音声およびZero-Shot音声クローニングをリアルタイム合成するデモです。">SNAP Frontend를 주요 오픈소스 및 신경망 TTS 모델(Edge-TTS, Piper VITS, F5-TTS Flow Matching)과 결합하여 문맥 의존 고품질 음성 및 Zero-Shot 보이스 클로닝을 실시간 합성하는 인터랙티브 데모입니다.</span>
+              <p class="text-sm text-slate-400 leading-relaxed font-sans">
+                <span data-en="Interactive Hugging Face Spaces demonstrating SNAP Frontend integration with neural speech synthesis. Featuring the flagship Edge-TTS cloud neural demo alongside lightweight on-device and diffusion models for zero-hallucination, context-aware speech." data-ko="SNAP Frontend를 최신 신경망 음성 합성 파이프라인과 결합하여 문맥 오류 없는 고품질 음성을 실시간 생성하는 대화형 데모입니다. 대표 데모인 Edge-TTS 클라우드 뉴럴 보이스를 비롯하여 경량 온디바이스 및 확산 모델 연동을 직접 체험해 보실 수 있습니다." data-ja="SNAP Frontendを最新神経網音声合成パイプラインと結合し、文脈エラーのない高音質音声をリアルタイム生成するデモです。代表デモであるEdge-TTSをはじめ、軽量オンデバイスおよび拡散モデルとの連携をご体験いただけます。">SNAP Frontend를 최신 신경망 음성 합성 파이프라인과 결합하여 문맥 오류 없는 고품질 음성을 실시간 생성하는 대화형 데모입니다. 대표 데모인 Edge-TTS 클라우드 뉴럴 보이스를 비롯하여 경량 온디바이스 및 확산 모델 연동을 직접 체험해 보실 수 있습니다.</span>
               </p>
 
-              <!-- Open-Source Voice Demo Cards (Vertical Stack) -->
-              <div class="space-y-3 pt-1">
-                <!-- Subcard 1: Edge-TTS -->
-                <div class="p-4 rounded-lg border border-slate-800 bg-slate-950/70 space-y-2 transition-colors hover:border-slate-700">
-                  <div class="flex justify-between items-center flex-wrap gap-2">
-                    <span class="text-sm font-semibold text-slate-200 font-sans">Edge-TTS (Cloud Neural TTS)</span>
-                    <a href="https://huggingface.co/spaces/softguy777/snap_voice_demo4" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono border border-slate-700 transition-colors">
-                      <span>Edge-TTS Demo ↗</span>
-                    </a>
+              <!-- Flagship Featured Demo Card: Edge-TTS -->
+              <div class="p-5 rounded-lg border border-emerald-900/60 bg-gradient-to-b from-slate-900/90 to-slate-950/90 space-y-3 transition-colors hover:border-emerald-700/60 shadow-lg shadow-emerald-950/20">
+                <div class="flex justify-between items-center flex-wrap gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-950 border border-emerald-800 text-emerald-300 font-semibold" data-en="Flagship Demo" data-ko="대표 데모" data-ja="代表デモ">대표 데모</span>
+                    <span class="text-sm font-semibold text-slate-100 font-sans">Edge-TTS (Cloud Neural TTS)</span>
                   </div>
-                  <p class="text-xs text-slate-400 leading-relaxed font-sans" data-en="SNAP Cloud REST API integration with Edge-TTS. Enhances raw text with precision contextual numeral readings, heteronym disambiguation, and custom dictionaries for superior natural speech." data-ko="SNAP Cloud REST API와 Edge-TTS 연동 데모. 문맥에 따른 수사·단위 변별, 동철이음어 구분, 사용자 정의 사전(custom_dict) 등 SNAP의 정밀한 의미 분석을 더해 자연스럽고 정확한 고품질 발음을 합성합니다." data-ja="SNAP Cloud REST APIとEdge-TTSの連携デモ。文脈に応じた数詞・助数詞弁別、同音異義語判別、カスタム辞書などSNAPの精密な意味解析を付加し、高品位な発音を合成します。">SNAP Cloud REST API와 Edge-TTS 연동 데모. 문맥에 따른 수사·단위 변별, 동철이음어 구분, 사용자 정의 사전(custom_dict) 등 SNAP의 정밀한 의미 분석을 더해 자연스럽고 정확한 고품질 발음을 합성합니다.</p>
+                  <a href="https://huggingface.co/spaces/softguy777/snap_voice_demo4" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded bg-emerald-800 hover:bg-emerald-700 text-white text-xs font-mono font-medium border border-emerald-600 transition-colors shadow-sm">
+                    <span data-en="Try Edge-TTS Demo ↗" data-ko="실시간 음성 합성 체험 ↗" data-ja="リアルタイム体験 ↗">실시간 음성 합성 체험 ↗</span>
+                  </a>
                 </div>
-
-                <!-- Subcard 2: Piper VITS -->
-                <div class="p-4 rounded-lg border border-slate-800 bg-slate-950/70 space-y-2 transition-colors hover:border-slate-700">
-                  <div class="flex justify-between items-center flex-wrap gap-2">
-                    <span class="text-sm font-semibold text-slate-200 font-sans">Piper VITS</span>
-                    <a href="https://huggingface.co/spaces/softguy777/snap_voice_demo2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono border border-slate-700 transition-colors">
-                      <span>Piper Demo ↗</span>
-                    </a>
-                  </div>
-                  <p class="text-xs text-slate-400 leading-relaxed font-sans" data-en="Lightweight on-device TTS. Overcomes legacy espeak-ng pronunciation limits across 22 Korean voices." data-ko="초경량 온디바이스 TTS. 기존 espeak-ng의 발음 한계를 극복하고 22개 화자 스타일을 지원합니다." data-ja="超軽量オンデバイスTTS。espeak-ngの限界を克服し22話者スタイルをサポートします。">초경량 온디바이스 TTS. 기존 espeak-ng의 발음 한계를 극복하고 22개 화자 스타일을 지원합니다.</p>
+                <p class="text-xs text-slate-300 leading-relaxed font-sans" data-en="The primary showcase integrating SNAP Cloud REST API with Microsoft Edge-TTS. While raw text alone often causes contextual misreadings in numbers and heteronyms, SNAP provides precise contextual numeral reading (e.g. Bus 3 [Sam-beon] vs transfer 3 times [Se-beon]), heteronym disambiguation, and custom user dictionaries (custom_dict) to generate flawless, natural Korean speech in real time." data-ko="SNAP Cloud REST API와 Microsoft Edge-TTS를 실시간 연동한 공식 대표 데모입니다. 일반 텍스트 원문만으로는 한계가 있는 문맥별 수사·단위 변별(예: 3번 버스[삼 번] vs 3번 갈아타기[세 번]), 동철이음어(동음이의어) 구분, 고유명사 및 사용자 정의 사전(custom_dict), 자연스러운 자동 운율 끊어읽기를 SNAP이 정밀하게 전처리하여 최상의 완성도 높은 한국어 음성을 실시간으로 합성합니다." data-ja="SNAP Cloud REST APIとMicrosoft Edge-TTSをリアルタイム連携した公式代表デモです。一般テキストでは誤読しやすい文脈依存の数詞・助数詞弁別（例: 3番バス vs 3回乗り換え）、同音異義語判別、固有名詞・カスタム辞書(custom_dict)をSNAPが精密に前処理し、自然で完成度の高い韓国語音声をリアルタイム合成します。">SNAP Cloud REST API와 Microsoft Edge-TTS를 실시간 연동한 공식 대표 데모입니다. 일반 텍스트 원문만으로는 한계가 있는 문맥별 수사·단위 변별(예: 3번 버스[삼 번] vs 3번 갈아타기[세 번]), 동철이음어(동음이의어) 구분, 고유명사 및 사용자 정의 사전(custom_dict), 자연스러운 자동 운율 끊어읽기를 SNAP이 정밀하게 전처리하여 최상의 완성도 높은 한국어 음성을 실시간으로 합성합니다.</p>
+                <div class="flex items-center flex-wrap gap-2 pt-1 text-[11px] font-mono text-slate-400">
+                  <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">⚡ Real-Time Cloud API</span>
+                  <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">🎯 Contextual Numerals</span>
+                  <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">📖 Heteronym Disambiguation</span>
+                  <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">📚 Custom Dictionary</span>
                 </div>
+              </div>
 
-                <!-- Subcard 3: F5-TTS (Zero-Shot) -->
-                <div class="p-4 rounded-lg border border-slate-800 bg-slate-950/70 space-y-2 transition-colors hover:border-slate-700">
-                  <div class="flex justify-between items-center flex-wrap gap-2">
-                    <span class="text-sm font-semibold text-slate-200 font-sans">F5-TTS Diffusion</span>
-                    <a href="https://huggingface.co/spaces/softguy777/snap_voice_demo3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono border border-slate-700 transition-colors">
-                      <span>F5-TTS Demo ↗</span>
-                    </a>
+              <!-- Supplementary Open-Source Voice Demos (Compact 2-Column Grid) -->
+              <div class="pt-2 border-t border-slate-800/80 space-y-2.5">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-mono text-slate-400 uppercase tracking-wider" data-en="Other Open-Source TTS Demos (On-Device & Diffusion)" data-ko="기타 오픈소스 TTS 연동 데모 (온디바이스 & 확산 모델)" data-ja="その他オープンソースTTS連携デモ（オンデバイス＆拡散）">기타 오픈소스 TTS 연동 데모 (온디바이스 & 확산 모델)</span>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-3">
+                  <!-- Subcard 1: Piper VITS -->
+                  <div class="p-3.5 rounded-lg border border-slate-800 bg-slate-950/60 space-y-1.5 transition-colors hover:border-slate-700">
+                    <div class="flex justify-between items-center flex-wrap gap-2">
+                      <span class="text-xs font-semibold text-slate-200 font-sans">Piper VITS</span>
+                      <a href="https://huggingface.co/spaces/softguy777/snap_voice_demo2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] font-mono border border-slate-700 transition-colors">
+                        <span>Piper Demo ↗</span>
+                      </a>
+                    </div>
+                    <p class="text-[11px] text-slate-400 leading-relaxed font-sans" data-en="Ultra-lightweight on-device VITS TTS. Overcomes legacy espeak-ng pronunciation limits across 22 Korean voices." data-ko="초경량 온디바이스 VITS TTS. 기존 espeak-ng의 발음 한계를 극복하고 22개 화자 스타일을 지원합니다." data-ja="超軽量オンデバイスTTS。espeak-ngの限界を克服し22話者スタイルをサポート。">초경량 온디바이스 VITS TTS. 기존 espeak-ng의 발음 한계를 극복하고 22개 화자 스타일을 지원합니다.</p>
                   </div>
-                  <p class="text-xs text-slate-400 leading-relaxed font-sans" data-en="Flow Matching diffusion TTS. Supports 16 preset voices and Zero-Shot Voice Cloning from reference audio." data-ko="Flow Matching 확산 모델. 16개 프리셋 화자 및 참조 음성 기반 Zero-Shot 보이스 클로닝을 지원합니다." data-ja="Flow Matching拡散モデル。16プリセットおよび参照音声からのゼロショット音声クローニングをサポートします。">Flow Matching 확산 모델. 16개 프리셋 화자 및 참조 음성 기반 Zero-Shot 보이스 클로닝을 지원합니다.</p>
+
+                  <!-- Subcard 2: F5-TTS Diffusion -->
+                  <div class="p-3.5 rounded-lg border border-slate-800 bg-slate-950/60 space-y-1.5 transition-colors hover:border-slate-700">
+                    <div class="flex justify-between items-center flex-wrap gap-2">
+                      <span class="text-xs font-semibold text-slate-200 font-sans">F5-TTS Diffusion</span>
+                      <a href="https://huggingface.co/spaces/softguy777/snap_voice_demo3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] font-mono border border-slate-700 transition-colors">
+                        <span>F5-TTS Demo ↗</span>
+                      </a>
+                    </div>
+                    <p class="text-[11px] text-slate-400 leading-relaxed font-sans" data-en="Flow Matching diffusion TTS. Supports 16 preset voices and Zero-Shot Voice Cloning from reference audio." data-ko="Flow Matching 확산 모델. 16개 프리셋 화자 및 참조 음성 기반 Zero-Shot 보이스 클로닝을 지원합니다." data-ja="Flow Matching拡散モデル。16話者およびゼロショット音声クローニング対応。">Flow Matching 확산 모델. 16개 프리셋 화자 및 참조 음성 기반 Zero-Shot 보이스 클로닝을 지원합니다.</p>
+                  </div>
                 </div>
               </div>
 
